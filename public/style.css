@@ -1,0 +1,756 @@
+@font-face {
+    font-family: 'GlorizVintage';
+    src: url('./assets/GlorizVintage.otf');
+  }
+  
+  :root {
+    
+    /* Colores */
+  
+      /* Fondo */
+        --Background: #090009;
+  
+      /* Principales */
+        --Purple: #29196D;
+        --DarkPurple: #29196D;
+        --LightPurple: #A482F7;
+
+      /* Secundarios */
+        --Pink: #FF4C78;
+        --BlackPurple: #1D0229;
+        --WhitePurple: #EBE3F8;
+  }
+
+  /* General */
+    
+  *{
+    margin: 0;
+    }
+
+  body{
+    background-color: var(--Background);
+    color: white;
+    padding: 0;
+  }
+
+  .Content{
+    padding: 5vw;
+    overflow-x: hidden;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  h1{
+    font-family: 'GlorizVintage';
+    font-size: 96px;
+    font-weight: 400;
+    line-height: 90px;
+    margin: 0;
+    line-height: 50px;
+  }
+
+  h2{
+    font-family: 'GlorizVintage';
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 90px;
+    margin: 0;
+    padding: 0;
+    line-height: 50px;
+  }
+
+  h3{
+    font-family: 'GlorizVintage';
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 90px;
+    margin: 0;
+    line-height: 50px;
+  }
+
+  h4{
+    font-family: 'Poppins';
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  p{
+    font-family: 'Poppins';
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  .Small-Text{
+    font-family: 'Poppins';
+    font-size: 16px;
+  }
+
+  /* Header */
+
+  header{
+    font-family: 'Poppins';
+    background-color: var(--Purple);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5vw;
+    height: 12vh;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 20px 0px;
+  }
+
+    .logo{
+        height: 6vh;
+        align-items: center;
+    }
+
+        .header-logo:hover{
+            cursor: pointer;
+        }
+
+        .logo img{
+            height: 100%;
+        }
+
+    header ul {
+        display: flex;
+        gap: 2vw;
+    }
+
+        header ul p {
+            transition: all 0.3s;
+        }
+
+        header ul p:hover {
+            cursor: pointer;
+            opacity: 0.7;
+            scale: 1.1;
+        }
+
+        a{
+            color: white;
+            text-decoration: none;
+        }
+
+            a:focus, a:active, a::after, a:visited{
+                color: white;
+                text-decoration: none;
+            }
+
+        /* Estilos base para el botón de hamburguesa */
+        .hamburger {
+            display: none; /* Mostrar solo en pantallas pequeñas */
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px; /* 7px para cada barra con 5px de espacio */
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .hamburger span {
+            width: 100%;
+            height: 3px;
+            background-color: white;
+            border-radius: 5px;
+            transition: all 0.3s ease-in-out; /* Animación suave */
+        }
+
+        /* Transformar las líneas en una "X" cuando el menú esté activo */
+        .hamburger.active span:nth-child(1) {
+            transform: translateY(9px) rotate(45deg); /* Primera barra rota 45 grados */
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0; /* Segunda barra desaparece */
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: translateY(-9px) rotate(-45deg); /* Tercera barra rota -45 grados */
+        }
+
+  /* Home */
+
+  .Home{
+    display: flex;
+    align-items: center;
+  }
+    .Home-p{
+        font-size: 40px;
+        margin-bottom: 2vw;
+    }
+
+    .Home-gif{
+        margin-top: 2vw;
+        width: 12vw;
+    }
+
+  /* About */
+
+  .About, .Experience, .Projects, .Contact-Me{
+    margin-top: 15vh;
+  }
+
+    /* About me */
+
+    .About-Me{
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+    }
+
+        .About-Me-Section{
+            justify-content: right;
+            text-align: right;
+            width: 50%;
+        }
+
+            .About-Tags{
+                display: flex;
+                justify-content: right;
+                margin: 2vh 0;
+            }
+
+            .About-Text {
+                position: relative; /* Necesario para que los pseudo-elementos se posicionen correctamente */
+                background-color: var(--Purple);
+                border-radius: 10px 0 0 10px; /* Mantiene el border-radius */
+                padding: 8vh 6vw 8vh 8vh;
+                margin: 6vh -6vw 10vh 0;
+            }
+            
+                .About-Text::before {
+                    content: '';
+                    position: absolute;
+                    bottom: -1vw; /* Offset superior de 1vw */
+                    left: -1vw; /* Offset izquierdo de 1vw */
+                    width: 3px; /* Ancho del borde */
+                    height: 50%; /* Altura del borde izquierdo (ajusta como desees) */
+                    background: linear-gradient(to bottom, var(--Pink) 30%, transparent 30%, transparent 70%, var(--Pink) 70%); 
+                    background-size: 100% 20px; /* Altura total del dash y del espacio entre ellos */
+                    border-radius: 0 0 0 10px; /* Mantiene el border-radius del div */
+                }
+                
+                .About-Text::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -1vw; /* Offset superior de 1vw */
+                    left: -1vw; /* Offset izquierdo de 1vw */
+                    width: calc(80% + 1vw); /* Mitad del ancho más el offset */
+                    height: 3px; /* Alto del borde */
+                    background: linear-gradient(to right, var(--Pink) 30%, transparent 30%, transparent 70%, var(--Pink) 70%);
+                    background-size: 20px 100%; /* Ancho total del dash y del espacio entre ellos */
+                    border-radius: 0 0 0 10px; /* Mantiene el border-radius en la parte superior */
+                }
+                        
+    /* Skills */
+
+    .Skills{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 6vh 16vw;
+        position: relative;
+        background-color: var(--Purple);
+        border-radius: 10px;
+        padding: 8vh;
+    }
+
+        .Skills::before {
+            content: '';
+            position: absolute;
+            bottom: -1vw; /* Offset superior de 1vw */
+            right: -1vw; /* Offset izquierdo de 1vw */
+            width: 3px; /* Ancho del borde */
+            height: 50%; /* Altura del borde izquierdo (ajusta como desees) */
+            background: linear-gradient(to bottom, var(--LightPurple) 30%, transparent 30%, transparent 70%, var(--LightPurple) 70%); 
+            background-size: 100% 20px; /* Altura total del dash y del espacio entre ellos */
+            border-radius: 0 0 10px 0; /* Mantiene el border-radius del div */
+        }
+        
+        .Skills::after {
+            content: '';
+            position: absolute;
+            bottom: -1vw; /* Offset superior de 1vw */
+            right: -1vw; /* Offset izquierdo de 1vw */
+            width: calc(80% + 1vw); /* Mitad del ancho más el offset */
+            height: 3px; /* Alto del borde */
+            background: linear-gradient(to right, var(--LightPurple) 30%, transparent 30%, transparent 70%, var(--LightPurple) 70%);
+            background-size: 20px 100%; /* Ancho total del dash y del espacio entre ellos */
+            border-radius: 0 0 10px 0; /* Mantiene el border-radius en la parte superior */
+        }
+
+        .Skills h3, .Experience h3{
+            margin-bottom: 3vh;
+        }
+    
+    .CV{
+        background-color: var(--Purple);
+        border-radius: 10px;
+        text-align: center;
+        align-items: center;
+        width: 20vw;
+        margin: 6vh auto;
+        padding: 4vh 3vh 3vh 3vh;
+    }
+    
+        .CV h4 {
+            font-family: "GlorizVintage";
+            font-size: 30px;
+            font-weight: 400;
+            transition: all 0.3s;
+        }
+
+        .CV h4:hover{
+            cursor: pointer;
+            scale: 1.05;
+            opacity: 0.7;
+        }
+
+/* Experience */
+
+        .Work-Experience, .Education-Experience, .Extra-Experience {
+            position: relative;
+            background-color: var(--Purple);
+            border-radius: 10px;
+            padding: 6vh 8vh 8vh 8vh;
+            width: 38%;
+            margin: 6vh 0 0;
+        }
+
+            .Experience-Inner-Items{
+                display: flex;
+                flex-direction: column;
+                gap: 5vh;
+            }
+
+                .Work-Experience::before {
+                    content: '';
+                    position: absolute;
+                    top: -1vw; /* Offset superior de 1vw */
+                    right: -1vw; /* Offset izquierdo de 1vw */
+                    width: 3px; /* Ancho del borde */
+                    height: 50%; /* Altura del borde izquierdo (ajusta como desees) */
+                    background: linear-gradient(to bottom, var(--Pink) 30%, transparent 30%, transparent 70%, var(--Pink) 70%); 
+                    background-size: 100% 20px; /* Altura total del dash y del espacio entre ellos */
+                    border-radius: 0 10px 0 0; /* Mantiene el border-radius del div */
+                }
+                
+                .Work-Experience::after {
+                    content: '';
+                    position: absolute;
+                    top: -1vw; /* Offset superior de 1vw */
+                    right: -1vw; /* Offset izquierdo de 1vw */
+                    width: calc(75% + 1vw); /* Mitad del ancho más el offset */
+                    height: 3px; /* Alto del borde */
+                    background: linear-gradient(to right, var(--Pink) 30%, transparent 30%, transparent 70%, var(--Pink) 70%);
+                    background-size: 20px 100%; /* Ancho total del dash y del espacio entre ellos */
+                    border-radius: 0 10px 0 0; /* Mantiene el border-radius en la parte superior */
+                }
+
+            .Education-Experience{
+                font-family: "Poppins";
+                margin-left: auto; /* Empuja el segundo elemento hacia la derecha */
+                margin-top: -45vh;
+            }
+
+                .Education-Experience::before {
+                    content: '';
+                    position: absolute;
+                    bottom: -1vw; /* Offset superior de 1vw */
+                    left: -1vw; /* Offset izquierdo de 1vw */
+                    width: 3px; /* Ancho del borde */
+                    height: 50%; /* Altura del borde izquierdo (ajusta como desees) */
+                    background: linear-gradient(to bottom, var(--LightPurple) 30%, transparent 30%, transparent 70%, var(--LightPurple) 70%); 
+                    background-size: 100% 20px; /* Altura total del dash y del espacio entre ellos */
+                    border-radius: 0 0 0 10px; /* Mantiene el border-radius del div */
+                }
+                
+                .Education-Experience::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -1vw; /* Offset superior de 1vw */
+                    left: -1vw; /* Offset izquierdo de 1vw */
+                    width: calc(80% + 1vw); /* Mitad del ancho más el offset */
+                    height: 3px; /* Alto del borde */
+                    background: linear-gradient(to right, var(--LightPurple) 30%, transparent 30%, transparent 70%, var(--LightPurple) 70%);
+                    background-size: 20px 100%; /* Ancho total del dash y del espacio entre ellos */
+                    border-radius: 0 0 0 10px; /* Mantiene el border-radius en la parte superior */
+                }
+
+                .Achievements{
+                    margin-top: 3vh;
+                    padding-left: 3vh;
+                    border-left: 2px solid white;
+                }
+                
+            .Extra-Experience{
+                margin-top: -15vh;
+            }
+
+                .Extra-Experience::before {
+                    content: '';
+                    position: absolute;
+                    top: -1vw; /* Offset superior de 1vw */
+                    left: -1vw; /* Offset izquierdo de 1vw */
+                    width: 3px; /* Ancho del borde */
+                    height: 80%; /* Altura del borde izquierdo (ajusta como desees) */
+                    background: linear-gradient(to bottom, var(--Pink) 30%, transparent 30%, transparent 70%, var(--Pink) 70%); 
+                    background-size: 100% 20px; /* Altura total del dash y del espacio entre ellos */
+                    border-radius: 10px 0 0 0; /* Mantiene el border-radius del div */
+                }
+                
+                .Extra-Experience::after {
+                    content: '';
+                    position: absolute;
+                    top: -1vw; /* Offset superior de 1vw */
+                    left: -1vw; /* Offset izquierdo de 1vw */
+                    width: calc(20% + 1vw); /* Mitad del ancho más el offset */
+                    height: 3px; /* Alto del borde */
+                    background: linear-gradient(to right, var(--Pink) 30%, transparent 30%, transparent 70%, var(--Pink) 70%);
+                    background-size: 20px 100%; /* Ancho total del dash y del espacio entre ellos */
+                    border-radius: 10px 0 0 0; /* Mantiene el border-radius en la parte superior */
+                }
+
+/* Projects */
+
+.Projects{
+    text-align: center;
+}
+
+    .carousel{
+        margin-top: 6vh;
+    }
+
+        .project-border{
+            position: relative;
+        }
+
+            .project-border::before {
+                content: '';
+                position: absolute;
+                bottom: -1vw; /* Offset superior de 1vw */
+                right: 10vw; /* Offset izquierdo de 1vw */
+                width: calc(45%); /* Mitad del ancho más el offset */
+                height: 3px; /* Alto del borde */
+                background: linear-gradient(to right, var(--Pink) 30%, transparent 30%, transparent 70%, var(--Pink) 70%);
+                background-size: 20px 100%; /* Ancho total del dash y del espacio entre ellos */
+                border-radius: 0 0 10px 0;
+            }
+            
+            .project-border::after {
+                content: '';
+                position: absolute;
+                top: -1vw; /* Offset superior de 1vw */
+                left: 10vw; /* Offset izquierdo de 1vw */
+                width: calc(45%); /* Mitad del ancho más el offset */
+                height: 3px; /* Alto del borde */
+                background: linear-gradient(to right, var(--LightPurple) 30%, transparent 30%, transparent 70%, var(--LightPurple) 70%);
+                background-size: 20px 100%; /* Ancho total del dash y del espacio entre ellos */
+                border-radius: 10px 0 0 0;
+            }
+
+        .carousel-arrows{
+            display: flex;
+            justify-content: space-between;
+        }
+
+            .prev, .next{
+                background: none;
+                outline: none;
+                border: none;
+                z-index: 1;
+                translate: 0 -45vh;
+                opacity: 0.5;
+                transition: all 0.3s;
+            }
+
+                .prev img, .next img{
+                    width: 2.5vw;
+                }
+
+                .prev:hover, .next:hover{
+                    scale: 1.1;
+                    opacity: 0.8;
+                    cursor: pointer;
+                }
+
+/* Contact */
+
+.Contact-Me{
+    display: flex;
+}
+
+    .Contact1{
+        position: relative;
+        background-color: var(--Purple);
+        border-radius: 0 10px 10px 0;
+        padding: 4vh 8vh 4vh 6vw;
+        margin: 6vh 0 5vh -6vw;
+    }
+
+        .Contact1::before {
+            content: '';
+            position: absolute;
+            bottom: -1vw; /* Offset superior de 1vw */
+            right: -1vw; /* Offset izquierdo de 1vw */
+            width: 3px; /* Ancho del borde */
+            height: 50%; /* Altura del borde izquierdo (ajusta como desees) */
+            background: linear-gradient(to bottom, var(--LightPurple) 30%, transparent 30%, transparent 70%, var(--LightPurple) 70%); 
+            background-size: 100% 20px; /* Altura total del dash y del espacio entre ellos */
+            border-radius: 0 0 10px 0; /* Mantiene el border-radius del div */
+        }
+        
+        .Contact1::after {
+            content: '';
+            position: absolute;
+            bottom: -1vw; /* Offset superior de 1vw */
+            right: -1vw; /* Offset izquierdo de 1vw */
+            width: calc(85% + 1vw); /* Mitad del ancho más el offset */
+            height: 3px; /* Alto del borde */
+            background: linear-gradient(to right, var(--LightPurple) 30%, transparent 30%, transparent 70%, var(--LightPurple) 70%);
+            background-size: 20px 100%; /* Ancho total del dash y del espacio entre ellos */
+            border-radius: 0 0 10px 0; /* Mantiene el border-radius en la parte superior */
+        }
+
+        .icon-section{
+            display: flex;
+            align-items: center;
+            gap: 2vw;
+            margin: 2.5vh 0;
+        }
+
+            .icon1, .icon2{
+                width: 2.5vw;
+                transition: all 0.3s;
+            }
+
+            .icon2:hover{
+                scale: 1.1;
+            }
+
+    .Contact2{
+        display: flex;
+        gap: 1vw;
+    }
+
+footer{
+    background-color: var(--Purple);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: right;
+    padding: 0 5vw;
+    margin-top: 2vh;
+    height: 12vh;
+}
+
+    footer p{
+        font-size: 10px;
+    }
+
+
+/* Celular */
+
+@media screen and (max-width: 767px) {
+    
+    .Content{overflow-x: hidden;}
+    h1{font-size: 90px;}
+    h2{font-size: 52px;}
+    h3{font-size: 30px;}
+    h4{font-size: 20px;}
+    p{font-size: 16px;}
+    .Small-Text{font-size: 14px;}
+    
+      /* Header */
+        .logo{
+            height: 6vh;
+            align-items: center;
+        }
+        .header-nav{display: none;}
+    
+      /* Home */
+        .Home-p{
+            font-size: 30px;
+            margin-bottom: 3vh;
+        }
+        .Home-gif{width: 40vw;}
+    
+      /* About */
+      .About, .Experience, .Projects, .Contact-Me{margin-top: 10vh;}
+    
+        /* About me */
+        .About-Me{
+            flex-direction: column-reverse;
+            align-items: start;
+        }
+        .About-Me-Section{
+            text-align: left;
+            width: auto;
+        }
+        .About-Tags{justify-content: left;}
+        .About-Text {
+            border-radius: 10px; 
+            padding: 5vh;
+            margin: 6vh auto;
+        }
+        .About-Text::before {height: 0%;}
+        .About-Text::after {
+            bottom: -2vh; 
+            left: -2vh; 
+            width: calc(80% + 1vh); 
+        }
+                            
+        /* Skills */
+        .Skills{
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 6vh;
+            padding: 5vh;
+        }
+        .Skills::before {height: 0%;}
+        .Skills::after {
+            bottom: -2vh;
+            right: -2vh; 
+            width: calc(80% + 1vh); 
+        }
+        .Soft-Skills, .Software-Skills, .Language-Skills{
+            padding-top: 3vh;
+            border-top: solid 3px white;
+        }
+        .CV{
+            width: 60%;
+            padding: 3vh 2vh 2vh 2vh;
+        }
+    
+    /* Experience */
+    .Work-Experience, .Education-Experience, .Extra-Experience {
+        padding: 2vh 5vh 5vh 5vh;
+        width: auto;
+        margin: 6vh 0 0;
+    }
+    .Work-Experience::before {height: 0%;}
+    .Work-Experience::after {
+        top: -2vh; 
+        left: -2vh; 
+        width: calc(80% + 1vh); 
+    }
+    .Education-Experience::before {height: 0%;}
+    .Education-Experience::after {
+        top: -2vh;
+        left: 10vh;
+        width: calc(80% + 1vh);
+    }
+    .Achievements{
+        margin-top: 2vh;
+        padding-left: 1vh;
+    }
+    .Extra-Experience::before {height: 0%;}
+    .Extra-Experience::after {
+        top: -2vh; 
+        left: -2vh; 
+        width: calc(80% + 1vh); 
+    }
+    
+    /* Projects */
+    .Projects{
+        text-align: left;
+    }
+    .project-border::before {
+        bottom: -2vh;
+        right: -3vh;
+        width: calc(40%);
+    }
+    .project-border::after {
+        top: -2vh; 
+        left: -3vh; 
+        width: calc(40%);
+    }
+    .prev, .next{translate: 0 -25vh;}
+    .prev img, .next img{width: 1.5vh;}
+    
+    /* Contact */
+    .Contact-Me{display: block;}
+    .Contact-img{display: none;}
+    .Contact1{
+        width: auto;
+        border-radius: 10px;
+        padding: 3vh 8vh;
+        margin: 3vh -6vh 6vh;
+    }
+    .Contact1::before {height: 0%;}
+    .Contact1::after {
+        bottom: -2vh; 
+        right: -2vh; 
+        width: calc(80% + 1vw);
+    }
+    .icon-section{gap: 2vh;}
+    .icon1, .icon2{width: 4vh;}
+    .Contact2{gap: 2vh;}
+}
+
+/* Tablet */
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .About-Text {padding: 6vh 6vw 6vh 6vh;}
+    .Skills{padding: 6vh;}
+    .Work-Experience, .Education-Experience, .Extra-Experience {
+        width: auto;
+        margin: 6vh 0 0;
+        padding: 6vh;
+    }
+    .prev, .next{translate: 0 -25vh;}
+    .icon1, .icon2{width: 4vh;}
+  }
+
+/* Responsive Menu */
+
+@media screen and (max-width: 1023px) {
+    header{
+        justify-content: left;
+        flex-direction: row-reverse;
+      }
+    .logo{margin: 0 auto;}
+    /* Menú nav oculto en pantallas pequeñas */
+    .header-nav {
+        position: fixed;
+        top: 12vh;
+        left: -100%; /* Fuera de la pantalla a la derecha */
+        height: 100vh;
+        width: 50%; /* Ancho del menú */
+        background-color: var(--Purple); /* Color de fondo del menú */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        transition: left 0.4s ease-in-out; /* Animación del deslizamiento */
+        z-index: 1;
+        padding: 5vw;
+        gap: 3vh;
+    }
+    /* Menú cuando está activo */
+    .header-nav.active {left: 0;}
+    .hamburger {display: flex;}
+    .nav-link {font-size: 20px;}
+    .overlay{
+        opacity: 0;
+        visibility: hidden;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw; /* Asegura que ocupe el ancho completo de la ventana */
+        height: 100vh;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.5);
+        transition: all 0.3s ease;
+    }
+    .overlay.active{
+        opacity: 1; /* Totalmente visible cuando está activo */
+        visibility: visible;
+    }
+}

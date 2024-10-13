@@ -1,0 +1,59 @@
+[
+    {
+      "name": "Cloudtrack",
+      "description": "We embarked on a challenge to improve the management of internal processes within GDO, a leading company in the distribution of natural gas, focusing on their construction projects with other companies.",
+      "src": "./public/assets/ProjectCloudtrack.png",
+      "tag1": "UI",
+      "tag2": "Code",
+      "link": "https://www.behance.net/gallery/200259979/CloudTrack-GDO"
+    },
+    {
+      "name": "Ritual of Madness",
+      "description": "Ritual of Madness is a card & online game focused on roles and vote by majority. <br><br> With their roles, players will be divided in two sides, who will compete against each other.",
+      "src": "./public/assets/ProjectROM.gif",
+      "tag1": "Illustration",
+      "tag2": "Code",
+      "link": "https://www.behance.net/gallery/193558463/Ritual-of-madness-Card-Game"
+    },
+    {
+        "name": "Nintendo OOH",
+        "description": "The project consists creating and prototyping an interactive Out-Of-Home experience for Nintendo, with the purpose of captivating new costumers and promoting the brand's products through an interactive and enjoyable adversiting.",
+        "src": "./public/assets/ProjectNintendo.jpg",
+        "tag1": "UI",
+        "tag2": "Code",
+        "link": "https://www.behance.net/gallery/163439649/Nintendo-OOH-Experience"
+      },
+      {
+        "name": "Mauritius brand",
+        "description": "The objective was to design the brand for the country of Mauritius, a small country located in the Indian Ocean, in the Mascarene archipielago.",
+        "src": "./public/assets/ProjectMauritius.png",
+        "tag1": "Brand",
+        "tag2": "Graphic",
+        "link": "https://www.behance.net/portfolio/editor?project_id=139578265"
+      },
+      {
+        "name": "Hina Matsuri",
+        "description": "The objective was to create a series of 5 small illustrations, with the idea of representing a part of the Japanese culture. <br><br> Hina Matsuri, also known as doll day or girls' day, was the chosen festivity to be represented in this project.",
+        "src": "./public/assets/ProjectHinaMatsuri.png",
+        "tag1": "Illustration",
+        "tag2": "Animation",
+        "link": "https://www.behance.net/gallery/205842443/Hina-Matsuri-Illustration-animation"
+      },
+      {
+        "name": "Tesla poster",
+        "description": "This project aims to create a commemorative poster in honor of the inventor Nikola Tesla, highlighting his contribution to the world of science and technology.",
+        "src": "./public/assets/ProjectTesla.png",
+        "tag1": "Illustration",
+        "tag2": "Graphic",
+        "link": "https://www.behance.net/gallery/120372203/Nikola-Tesla-poster-design-isabella-Barona"
+      },
+      {
+        "name": "Hard Rock poster",
+        "description": "This project aims to create a poster based on the most iconic characteristics, festivities or places of the city New Orleans. Mardi Grass was chosen to represent this city, along with some of the most important of this festivity.",
+        "src": "./public/assets/ProjectHardRock.png",
+        "tag1": "Illustration",
+        "tag2": "Graphic",
+        "link": "https://www.behance.net/gallery/119618015/Hard-Rock-Cafe-New-Orleans-Isabella-Barona"
+      }
+  ]
+  

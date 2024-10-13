@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ibaro Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="./public/assets/favicon.svg">
+    <link rel="stylesheet" href="./public/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="#Home">
+                <img class="header-logo" src="./public/assets/Logo.svg">
+            </a>
+        </div>
+        
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul class="header-nav" id="navMenu">
+            <p><a class="nav-link" href="#Home">Home</a></p>
+            <p><a class="nav-link" href="#About">About</a></p>
+            <p><a class="nav-link" href="#Experience">Experience</a></p>
+            <p><a class="nav-link" href="#Projects">Projects</a></p>
+            <p><a class="nav-link" href="#Contact-Me">Contact me</a></p>
+        </ul>
+    </header>
+
+    <div class="Content">
+        <div class="overlay" id="overlay"></div>
+        <div class="Home" id="Home">
+            <div>
+                <p class="Home-p">Hi, I'm</p>
+                <h1>IBaro</h1>
+                <img class="Home-gif" src="./public/assets/TagGif.gif">
+            </div>
+            <div>
+                <p>Image</p>
+            </div>
+        </div>
+
+        <div class="About" id="About">
+            <div class="About-Me">
+                <div>
+                    <p>Image</p>
+                </div>
+
+                <div class="About-Me-Section">
+                    <div>
+                        <h2>About me</h2>
+                        <p>Isabella Barona</p>
+                        <div class="About-Tags">
+                            <custom-tag type="pink" label="21-04-2003"></custom-tag>
+                            <custom-tag type="purple" label="Cali, Colombia"></custom-tag>
+                        </div>
+                    </div>
+                    <div class="About-Text">
+                        <p>I’m an UI designer and illustrator with a great sense of responsibility and organization, which allows me to manage design projects with efficiency and creativity. </p>
+                        <p>I focus on providing aesthetic solutions that enhance the user experience with a high level of detail.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Skills">
+                    <div class="Hard-Skills">
+                        <h3>Skills</h3>
+                        <skill-list label="UI Design" level="4"></skill-list>
+                        <skill-list label="UX Design" level="3"></skill-list>
+                        <skill-list label="Brand identity" level="3"></skill-list>
+                        <skill-list label="Digital Illustration" level="4"></skill-list>
+                        <skill-list label="Traditional illustration" level="4"></skill-list>
+                        <skill-list label="Motion Graphics" level="2"></skill-list>
+                    </div>
+
+                    <div class="Soft-Skills">
+                        <h3>Soft skills</h3>
+                        <skill-list label="Adaptability" level="4"></skill-list>
+                        <skill-list label="Creativity" level="4"></skill-list>
+                        <skill-list label="Strategic thinking" level="4"></skill-list>
+                        <skill-list label="Time management" level="3"></skill-list>
+                        <skill-list label="Teamwork" level="3"></skill-list>
+                    </div>
+
+                    <div class="Software-Skills">
+                        <h3>Software</h3>
+                        <skill-list label="Adobe Suite" level="4"></skill-list>
+                        <skill-list label="Figma" level="4"></skill-list>
+                        <skill-list label="Krita" level="3"></skill-list>
+                        <skill-list label="HTML - JS - CSS" level="3"></skill-list>
+                    </div>
+
+                    <div class="Language-Skills">
+                        <h3>Language</h3>
+                        <skill-list label="Spanish" text="Native"></skill-list>
+                        <skill-list label="English" text="C1"></skill-list>
+                    </div>
+            </div>
+
+            <div class="CV">
+                <h4><a href="./public/assets/CV.pdf" target="_blank">Check my CV</a></h4>
+            </div>
+        </div>
+        
+        <div class="Experience" id="Experience">
+            <h2>Experience</h2>
+
+            <div class="Experience-Items">
+                <div class="Work-Experience">
+                    <h3>Work Experience</h3>
+                    <div class="Experience-Inner-Items">
+                        <div class="Experience-Group">
+                            <p class="Small-Text">September 2024 - Present day</p>
+                            <h4>Illustrator</h4>
+                            <p>Trans-pasando Fronteras Magazine, Cali</p>
+                        </div>
+                        <div class="Experience-Group">
+                            <p class="Small-Text">August 2024 - Present day</p>
+                            <h4>Monitor</h4>
+                            <p>UXLabICESI, Cali</p>
+                        </div>
+                        <div class="Experience-Group">
+                            <p class="Small-Text">February 2024 - July 2024</p>
+                            <h4>UI designer and frontend developer </h4>
+                            <p>Gases de Occidente, Cali</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="Education-Experience">
+                    <h3>Education</h3>
+                    <div class="Experience-Inner-Items">
+                        <div class="Experience-Group">
+                            <p class="Small-Text">2021 - 2025</p>
+                            <h4>Interactive Media Design</h4>
+                            <p>Universidad ICESI, Cali</p>
+                            <div class="Achievements">
+                                <p><b>Achievements</b></p>
+                                <ul>
+                                    <li>Academic Excellence Scholarship - Silver category</li>
+                                    <li>Honor Roll 2021-2 - Category 1</li>
+                                    <li>Pixel Media award– 1stplace for Audiovisual production</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="Experience-Group">
+                            <p class="Small-Text">2014 - 2020</p>
+                            <h4>High School</h4>
+                            <p>Liceo Benalcázar, Cali</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="Extra-Experience">
+                    <h3>Extracurriculars</h3>
+                    <div class="Experience-Inner-Items">
+                        <div class="Experience-Group">
+                            <p class="Small-Text">July 2024 - Present day</p>
+                            <h4>Design committee leader</h4>
+                            <p>Güinev student group</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="Projects" id="Projects">
+            <h2>Projects</h2>
+            <div class="carousel">
+                <div class="project-border">
+                        <div class="carousel-container"></div>
+                </div>
+                <div class="carousel-arrows">
+                    <button class="prev"><img src="./public/assets/Prev.svg"></button>
+                    <button class="next"><img src="./public/assets/Next.svg"></button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="Contact-Me" id="Contact-Me">
+            <div>
+                <h2>Contact Me</h2>
+                <div class="Contact1">
+                    <div class="icon-section">
+                        <img class="icon1" src="./public/assets/Email.svg">
+                        <p>isabella.baronap@gmail.com</p>
+                    </div>
+                    <div class="icon-section">
+                        <img class="icon1" src="./public/assets/Whatsapp.svg">
+                        <p>+57 316 776 8002</p>
+                    </div>
+                </div>
+                <h3>Follow me in</h3>
+                <div class="Contact2">
+                    <a href="https://www.linkedin.com/in/isabella-barona/" target="_blank">
+                        <img class="icon2" src="./public/assets/Linkedin.svg" alt="LinkedIn">
+                    </a>
+                    <a href="https://www.behance.net/IsabellaBarona21" target="_blank">
+                        <img class="icon2" src="./public/assets/Behance.svg" alt="Behance">
+                    </a>
+                    <a href="https://www.instagram.com/bari.techni?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+                        <img class="icon2" src="./public/assets/Instagram.svg" alt="Instagram">
+                    </a>
+                </div>                
+            </div>
+            <div>
+                <p class="Contact-img">Imagen</p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <img class="logo" src="./public/assets/Logo.svg">
+        <div>
+            <p>Developed by Isabella Barona 2024</p>
+            <p>Deployed in Github Pages</p>
+        </div>
+    </footer>
+
+    <script src="./public/index.js"></script>
+</body>
+</html>

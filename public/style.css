@@ -34,7 +34,7 @@
   }
 
   .Content{
-    padding: 5vw;
+    padding: 5vw 5vw 0 5vw;
     overflow-x: hidden;
   }
 
@@ -179,8 +179,16 @@
   /* Home */
 
   .Home{
-    display: flex;
+    margin: -5vw;
+    padding: 5vw 0 20vw 0;
     align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-image: url("../public/assets/CoverBackground.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom; 
   }
     .Home-p{
         font-size: 40px;
@@ -192,19 +200,42 @@
         width: 12vw;
     }
 
+    .Home-img{
+        width: 40vw;
+    }
+
   /* About */
 
   .About, .Experience, .Projects, .Contact-Me{
     margin-top: 15vh;
   }
 
+  .Section-Title{
+    display: flex;
+    align-items: flex-start;
+    gap: 1vw;
+  }
+
+    #Projects-Title{
+        justify-content: center;
+    }
+
+    #About-Title{
+        justify-content: end;
+    }
+
     /* About me */
 
     .About-Me{
         display: flex;
         justify-content: space-between;
+        margin-top: -25vh;
         align-items: end;
     }
+
+        .About-img{
+            margin-left: -5vw;
+        }
 
         .About-Me-Section{
             justify-content: right;
@@ -417,6 +448,18 @@
                     background-size: 20px 100%; /* Ancho total del dash y del espacio entre ellos */
                     border-radius: 10px 0 0 0; /* Mantiene el border-radius en la parte superior */
                 }
+        
+        .Smoke1{
+            margin: -35vh 8vh -30vh 0;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .Smoke2{
+            margin: -15vh 8vh -5vh 0;
+            display: flex;
+            justify-content: flex-end;
+        }
 
 /* Projects */
 
@@ -485,14 +528,20 @@
 
 .Contact-Me{
     display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
+
+    .Contact-info{
+        width: 35%;
+    }
 
     .Contact1{
         position: relative;
         background-color: var(--Purple);
         border-radius: 0 10px 10px 0;
         padding: 4vh 8vh 4vh 6vw;
-        margin: 6vh 0 5vh -6vw;
+        margin: 6vh 0 10vh -6vw;
     }
 
         .Contact1::before {
@@ -538,6 +587,7 @@
     .Contact2{
         display: flex;
         gap: 1vw;
+        margin-top: 2vh;
     }
 
 footer{
@@ -547,7 +597,6 @@ footer{
     justify-content: space-between;
     text-align: right;
     padding: 0 5vw;
-    margin-top: 2vh;
     height: 12vh;
 }
 
@@ -561,8 +610,8 @@ footer{
 @media screen and (max-width: 767px) {
     
     .Content{overflow-x: hidden;}
-    h1{font-size: 90px;}
-    h2{font-size: 52px;}
+    h1{font-size: 70px;}
+    h2{font-size: 48px;}
     h3{font-size: 30px;}
     h4{font-size: 20px;}
     p{font-size: 16px;}
@@ -576,19 +625,58 @@ footer{
         .header-nav{display: none;}
     
       /* Home */
+      .Home{
+        flex-direction: row;
+        gap: -2vh;
+        padding: 10vh 10vw 10vh 10vw;
+        position: relative;
+      }
+      .Home::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url("../public/assets/CoverBackground.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center bottom;
+        transform: scaleX(-1); /* Flip horizontal */
+        z-index: -1; /* Asegura que la imagen de fondo esté detrás del contenido */
+      }
         .Home-p{
             font-size: 30px;
             margin-bottom: 3vh;
         }
-        .Home-gif{width: 40vw;}
+        .Home-gif{
+            width: 30vw;
+        }
+        .Home-img{
+            width: 35vw;
+            margin: -5vh 0 0 0;
+        }
     
       /* About */
       .About, .Experience, .Projects, .Contact-Me{margin-top: 10vh;}
+          #About-Title{
+            flex-direction: row-reverse;
+            justify-content: start;
+          }
     
-        /* About me */
+        /* About me */ 
         .About-Me{
             flex-direction: column-reverse;
             align-items: start;
+            justify-content: center;
+            margin-top: 0;
+        }
+        .About-img{
+            margin: 0 auto;
+        }
+        #About-img{
+            width: 80vw;
+            margin-right: 5vw;
         }
         .About-Me-Section{
             text-align: left;
@@ -629,6 +717,7 @@ footer{
         }
     
     /* Experience */
+    .Smoke1, .Smoke2, .Contact-img{display: none;}
     .Work-Experience, .Education-Experience, .Extra-Experience {
         padding: 2vh 5vh 5vh 5vh;
         width: auto;
@@ -676,7 +765,7 @@ footer{
     
     /* Contact */
     .Contact-Me{display: block;}
-    .Contact-img{display: none;}
+    .Contact-info{width: 100%;}
     .Contact1{
         width: auto;
         border-radius: 10px;
@@ -691,30 +780,45 @@ footer{
     }
     .icon-section{gap: 2vh;}
     .icon1, .icon2{width: 4vh;}
-    .Contact2{gap: 2vh;}
+    .Contact2{
+        gap: 2vh;
+        margin-bottom: 4vh;
+    }
 }
 
 /* Tablet */
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .About-Me{
+        margin-top: -15vh;
+        align-items: center;
+    }
     .About-Text {padding: 6vh 6vw 6vh 6vh;}
+    #About-img{
+        width: 45vw;
+        margin-right: 5vw;
+    }
     .Skills{padding: 6vh;}
     .Work-Experience, .Education-Experience, .Extra-Experience {
         width: auto;
         margin: 6vh 0 0;
         padding: 6vh;
     }
-    .prev, .next{translate: 0 -25vh;}
+    .Smoke1, .Smoke2{display: none;}
+    .prev, .next{translate: 0 -30vh;}
     .icon1, .icon2{width: 4vh;}
+    .Contact-info{width: 75%;}
+    .Contact-img{width: 50vw;}
   }
 
 /* Responsive Menu */
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
     header{
         justify-content: left;
         flex-direction: row-reverse;
       }
+    footer{margin-top: 4vh;}
     .logo{margin: 0 auto;}
     /* Menú nav oculto en pantallas pequeñas */
     .header-nav {

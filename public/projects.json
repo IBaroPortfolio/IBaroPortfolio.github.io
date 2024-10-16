@@ -1,7 +1,7 @@
 [
     {
       "name": "Cloudtrack",
-      "description": "We embarked on a challenge to improve the management of internal processes within GDO, a leading company in the distribution of natural gas, focusing on their construction projects with other companies.",
+      "description": "We embarked on a challenge to improve the management of internal processes within GDO, a leading company in the distribution of natural gas, focusing on their construction projects with other companies.<br><br>I worked principally on the frontend functions of the app and the implementation of the designs.",
       "src": "./public/assets/ProjectCloudtrack.png",
       "tag1": "UI",
       "tag2": "Code",
@@ -9,7 +9,7 @@
     },
     {
       "name": "Ritual of Madness",
-      "description": "Ritual of Madness is a card & online game focused on roles and vote by majority. <br><br> With their roles, players will be divided in two sides, who will compete against each other.",
+      "description": "Ritual of Madness is a card & online game focused on roles and vote by majority. With their roles, players will be divided in two sides, who will compete against each other.<br><br> I was in charge of the graphic design of the cards and other visual elements.",
       "src": "./public/assets/ProjectROM.gif",
       "tag1": "Illustration",
       "tag2": "Code",
@@ -17,7 +17,7 @@
     },
     {
         "name": "Nintendo OOH",
-        "description": "The project consists creating and prototyping an interactive Out-Of-Home experience for Nintendo, with the purpose of captivating new costumers and promoting the brand's products through an interactive and enjoyable adversiting.",
+        "description": "The project consists creating and prototyping an interactive Out-Of-Home experience for Nintendo, with the purpose of captivating new costumers and promoting the brand's products. <br><br> My role was to help build the interface and the great majority of the code.",
         "src": "./public/assets/ProjectNintendo.jpg",
         "tag1": "UI",
         "tag2": "Code",
@@ -33,7 +33,7 @@
       },
       {
         "name": "Hina Matsuri",
-        "description": "The objective was to create a series of 5 small illustrations, with the idea of representing a part of the Japanese culture. <br><br> Hina Matsuri, also known as doll day or girls' day, was the chosen festivity to be represented in this project.",
+        "description": "The objective was to create a series of 5 small illustrations, with the idea of representing a part of the Japanese culture. Hina Matsuri, also known as doll day or girls' day, was the chosen festivity to be represented in this project.",
         "src": "./public/assets/ProjectHinaMatsuri.png",
         "tag1": "Illustration",
         "tag2": "Animation",

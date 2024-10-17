@@ -229,12 +229,12 @@
     .About-Me{
         display: flex;
         justify-content: space-between;
-        margin-top: -25vh;
+        margin-top: -15vh;
         align-items: end;
     }
 
-        .About-img{
-            margin-left: -5vw;
+        #About-img{
+            width: 85%;
         }
 
         .About-Me-Section{
@@ -450,15 +450,19 @@
                 }
         
         .Smoke1{
-            margin: -35vh 8vh -30vh 0;
+            margin: -30vh 12vh -30vh 0;
             display: flex;
             justify-content: flex-end;
         }
 
         .Smoke2{
-            margin: -15vh 8vh -5vh 0;
+            margin: -20vh 12vh -5vh 0;
             display: flex;
             justify-content: flex-end;
+        }
+
+        .Smoke1 img, .Smoke2 img {
+            width: 40vw;
         }
 
 /* Projects */
@@ -534,6 +538,10 @@
 
     .Contact-info{
         width: 35%;
+    }
+
+    .Contact-img{
+        width: 40vw;
     }
 
     .Contact1{

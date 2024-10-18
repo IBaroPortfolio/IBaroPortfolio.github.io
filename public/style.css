@@ -329,13 +329,13 @@
         width: 20vw;
         margin: 6vh auto;
         padding: 4vh 3vh 3vh 3vh;
+        transition: all 0.3s;
     }
     
         .CV h4 {
             font-family: "GlorizVintage";
             font-size: 30px;
             font-weight: 400;
-            transition: all 0.3s;
         }
 
         .CV:hover{
@@ -450,9 +450,10 @@
                 }
         
         .Smoke1{
-            margin: -30vh 12vh -30vh 0;
+            margin: -23vh 12vh -30vh 0;
             display: flex;
             justify-content: flex-end;
+            z-index: -1;
         }
 
         .Smoke2{

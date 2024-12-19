@@ -172,7 +172,7 @@ class TagComponent extends HTMLElement {
 
   class Project extends HTMLElement {
     static get observedAttributes() {
-      return ['name', 'description', 'src', 'tag1', 'tag2', 'logo', 'link'];
+      return ['name', 'description', 'src', 'tag1', 'tag2', 'logo', 'link', 'icon'];
     }
   
     constructor() {
@@ -185,16 +185,26 @@ class TagComponent extends HTMLElement {
     }
   
     attributeChangedCallback(name, oldValue, newValue) {
-      this.render(); // Re-renderiza al cambiar atributos
+      if (oldValue !== newValue) {
+        this.render(); // Re-renderiza al cambiar atributos
+      }
     }
   
     render() {
-      const name = this.getAttribute('name') || 'Default Name';
-      const description = this.getAttribute('description') || 'Default Description';
-      const src = this.getAttribute('src') || 'default-image.png';
-      const tag1 = this.getAttribute('tag1') || 'Default Tag 1';
-      const tag2 = this.getAttribute('tag2') || 'Default Tag 2';
+      const name = this.getAttribute('name') || 'Project Name';
+      const description = this.getAttribute('description') || 'Project Description';
+      const src = this.getAttribute('src') || 'https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg';
+      const tag1 = this.getAttribute('tag1') || 'Tag';
+      const tag2 = this.getAttribute('tag2') || 'Tag';
       const link = this.getAttribute('link') || '#';
+      const icon = this.getAttribute('icon') || 'Project Icon';
+
+      let iconsrc = '';
+      if (icon === "Behance") {
+        iconsrc = "./public/assets/Behance.svg"
+      } else {
+        iconsrc = './public/assets/WebIcon.png';
+      }
   
       // Asegúrate de tener un espacio para el CSS también
       this.shadowRoot.innerHTML = `
@@ -300,7 +310,7 @@ class TagComponent extends HTMLElement {
               <div class="project-link">
                 <p>View more on</p>
                 <a href="${link}" target="_blank">
-                  <img class="project-logo" src="./public/assets/Behance.svg" alt="Behance">
+                  <img class="project-logo" src=${iconsrc} alt="Link">
                 </a>
               </div>
             </div>
@@ -333,6 +343,7 @@ class TagComponent extends HTMLElement {
       projectComponent.setAttribute('tag1', project.tag1);
       projectComponent.setAttribute('tag2', project.tag2);
       projectComponent.setAttribute('link', project.link);
+      projectComponent.setAttribute('icon', project.icon);
 
       // Definir el tamaño de cada proyecto como un "slide" en el carrusel
       projectComponent.style.minWidth = '100vw'; // Cada proyecto ocupará toda la vista

@@ -89,98 +89,34 @@
     font-size: 16px;
   }
 
-  /* Header */
+  /* Content */
 
-  header{
-    font-family: 'Poppins';
-    background-color: var(--Purple);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 5vw;
-    height: 12vh;
-    position: sticky;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 20px 0px;
+  #Content{
+    display: block;
   }
 
-    .logo{
-        height: 6vh;
-        align-items: center;
-    }
+  #About-Content{
+    display: none;
+    overflow-y: hidden;
+    margin-top: 10vw;
+    padding-top: 12vh;
+  }
 
-        .header-logo:hover{
-            cursor: pointer;
-        }
+  #Project-Content{
+    display: none;
+    margin-top: 5vw;
+    overflow: hidden;
+  }
 
-        .logo img{
-            height: 100%;
-        }
-
-    header ul {
-        display: flex;
-        gap: 2vw;
-    }
-
-        header ul p {
-            transition: all 0.3s;
-        }
-
-        header ul p:hover {
-            cursor: pointer;
-            opacity: 0.7;
-            scale: 1.1;
-        }
-
-        a{
-            color: white;
-            text-decoration: none;
-        }
-
-            a:focus, a:active, a::after, a:visited{
-                color: white;
-                text-decoration: none;
-            }
-
-        /* Estilos base para el botón de hamburguesa */
-        .hamburger {
-            display: none; /* Mostrar solo en pantallas pequeñas */
-            flex-direction: column;
-            justify-content: space-between;
-            width: 30px;
-            height: 21px; /* 7px para cada barra con 5px de espacio */
-            cursor: pointer;
-            transition: all 0.3s ease-in-out;
-        }
-
-        .hamburger span {
-            width: 100%;
-            height: 3px;
-            background-color: white;
-            border-radius: 5px;
-            transition: all 0.3s ease-in-out; /* Animación suave */
-        }
-
-        /* Transformar las líneas en una "X" cuando el menú esté activo */
-        .hamburger.active span:nth-child(1) {
-            transform: translateY(9px) rotate(45deg); /* Primera barra rota 45 grados */
-        }
-
-        .hamburger.active span:nth-child(2) {
-            opacity: 0; /* Segunda barra desaparece */
-        }
-
-        .hamburger.active span:nth-child(3) {
-            transform: translateY(-9px) rotate(-45deg); /* Tercera barra rota -45 grados */
-        }
+  #Contact-Content{
+    display: none;
+  }
 
   /* Home */
 
   .Home{
     margin: -5vw;
-    padding: 5vw 0 20vw 0;
+    padding: 10vw 0 20vw 0;
     align-items: center;
     display: flex;
     flex-direction: row;
@@ -206,8 +142,12 @@
 
   /* About */
 
-  .About, .Experience, .Projects, .Contact-Me{
+  .Experience, .Contact-Me{
     margin-top: 15vh;
+  }
+
+  .Projects{
+    margin-top: 5vh;
   }
 
   .Section-Title{
@@ -251,7 +191,7 @@
 
             .About-Text {
                 position: relative; /* Necesario para que los pseudo-elementos se posicionen correctamente */
-                background-color: var(--Purple);
+                /* background-color: var(--Purple); */
                 border-radius: 10px 0 0 10px; /* Mantiene el border-radius */
                 padding: 8vh 6vw 8vh 8vh;
                 margin: 6vh -6vw 10vh 0;
@@ -260,8 +200,8 @@
                 .About-Text::before {
                     content: '';
                     position: absolute;
-                    bottom: -1vw; /* Offset superior de 1vw */
-                    left: -1vw; /* Offset izquierdo de 1vw */
+                    bottom: 1vw; /* Offset superior de 1vw */
+                    left: 1vw; /* Offset izquierdo de 1vw */
                     width: 3px; /* Ancho del borde */
                     height: 50%; /* Altura del borde izquierdo (ajusta como desees) */
                     background: linear-gradient(to bottom, var(--Pink) 30%, transparent 30%, transparent 70%, var(--Pink) 70%); 
@@ -272,9 +212,9 @@
                 .About-Text::after {
                     content: '';
                     position: absolute;
-                    bottom: -1vw; /* Offset superior de 1vw */
-                    left: -1vw; /* Offset izquierdo de 1vw */
-                    width: calc(80% + 1vw); /* Mitad del ancho más el offset */
+                    bottom: 1vw; /* Offset superior de 1vw */
+                    left: 1vw; /* Offset izquierdo de 1vw */
+                    width: calc(80% + 3vw); /* Mitad del ancho más el offset */
                     height: 3px; /* Alto del borde */
                     background: linear-gradient(to right, var(--Pink) 30%, transparent 30%, transparent 70%, var(--Pink) 70%);
                     background-size: 20px 100%; /* Ancho total del dash y del espacio entre ellos */
@@ -283,65 +223,102 @@
                         
     /* Skills */
 
-    .Skills{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 6vh 16vw;
-        position: relative;
-        background-color: var(--Purple);
-        border-radius: 10px;
-        padding: 8vh;
+    .Section-Title{
+        margin: 4vh 0 8vh 0;
     }
 
-        .Skills::before {
+    .Skills{
+        column-count: 2;
+        column-gap: 3vw;
+        position: relative;
+    }
+
+    .SkillsCard, .LangCard{
+        background-color: var(--Purple);
+        padding: 2vw;
+        margin-bottom: 3vw;
+        border-radius: 10px;
+        break-inside: avoid;
+        position: relative;
+    }
+
+        .LangCard::before{
             content: '';
             position: absolute;
-            bottom: -1vw; /* Offset superior de 1vw */
-            right: -1vw; /* Offset izquierdo de 1vw */
-            width: 3px; /* Ancho del borde */
-            height: 50%; /* Altura del borde izquierdo (ajusta como desees) */
-            background: linear-gradient(to bottom, var(--LightPurple) 30%, transparent 30%, transparent 70%, var(--LightPurple) 70%); 
-            background-size: 100% 20px; /* Altura total del dash y del espacio entre ellos */
-            border-radius: 0 0 10px 0; /* Mantiene el border-radius del div */
+            bottom: -1vw;
+            right: -1vw;
+            width: 3px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--LightPurple) 30%, transparent 30%, transparent 70%, var(--LightPurple) 70%);
+            background-size: 100% 20px;
+            border-radius: 0 0 10px 0;
         }
         
-        .Skills::after {
+        .LangCard::after {
             content: '';
             position: absolute;
-            bottom: -1vw; /* Offset superior de 1vw */
-            right: -1vw; /* Offset izquierdo de 1vw */
-            width: calc(80% + 1vw); /* Mitad del ancho más el offset */
-            height: 3px; /* Alto del borde */
+            bottom: -1vw; 
+            right: -1vw; 
+            width: calc(100% + 1vw);
+            height: 3px;
             background: linear-gradient(to right, var(--LightPurple) 30%, transparent 30%, transparent 70%, var(--LightPurple) 70%);
-            background-size: 20px 100%; /* Ancho total del dash y del espacio entre ellos */
-            border-radius: 0 0 10px 0; /* Mantiene el border-radius en la parte superior */
+            background-size: 20px 100%; 
+            border-radius: 0 0 10px 0; 
         }
 
         .Skills h3, .Experience h3{
             margin-bottom: 3vh;
         }
-    
-    .CV{
-        background-color: var(--Purple);
+
+    .btns{
+        display: flex;
+        gap: 3vw;
+        justify-content: center;
+    }    
+
+    .More{
+        background-color: #211354;
+        border: solid 5px #211354;
         border-radius: 10px;
         text-align: center;
         align-items: center;
-        width: 20vw;
+        width: 15vw;
         margin: 6vh auto;
-        padding: 4vh 3vh 3vh 3vh;
+        padding: 3vh 2vh 2vh 2vh;
+        transition: all 0.3s;
+    }
+
+    .CV{
+        border: solid 5px #211354;
+        border-radius: 10px;
+        text-align: center;
+        align-items: center;
+        width: 15vw;
+        margin: 6vh auto;
+        padding: 3vh 2vh 2vh 2vh;
         transition: all 0.3s;
     }
     
-        .CV h4 {
+        .CV h4, .More h4 {
             font-family: "GlorizVintage";
             font-size: 30px;
             font-weight: 400;
         }
 
-        .CV:hover{
+        .CV:hover, .More:hover{
             cursor: pointer;
             scale: 1.05;
             opacity: 0.7;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        a:focus, a:active, a::after, a:visited {
+            color: white;
+            text-decoration: none;
         }
 
 /* Experience */
@@ -468,12 +445,24 @@
 
 /* Projects */
 
-.Projects{
-    text-align: center;
+.Projects-Section{
+    margin: 0 -5vw;
+    margin-top: 10vh;
+    padding: 10vw 0 15vw 0;
+    background-image: url("../public/assets/ProjectsBg.svg");
+    background-position: center; /* Centra la imagen horizontal y verticalmente */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-size: cover;
 }
 
+.Projects{
+    text-align: center;
+    padding: 10vw 0 5vw 0;
+}
+/* 
     .carousel{
         margin-top: 6vh;
+        margin-bottom: -6vh;
     }
 
         .project-border{
@@ -483,39 +472,39 @@
             .project-border::before {
                 content: '';
                 position: absolute;
-                bottom: -1vw; /* Offset superior de 1vw */
-                right: 10vw; /* Offset izquierdo de 1vw */
-                width: calc(45%); /* Mitad del ancho más el offset */
-                height: 3px; /* Alto del borde */
+                bottom: -1vw;
+                right: -5vw; 
+                width: calc(20%); 
+                height: 3px;
                 background: linear-gradient(to right, var(--Pink) 30%, transparent 30%, transparent 70%, var(--Pink) 70%);
-                background-size: 20px 100%; /* Ancho total del dash y del espacio entre ellos */
-                border-radius: 0 0 10px 0;
-            }
+                background-size: 20px 100%; 
+                border-radius: 0 0 0 10px;
+            } */
             
-            .project-border::after {
+            /* .project-border::after {
                 content: '';
                 position: absolute;
-                top: -1vw; /* Offset superior de 1vw */
-                left: 10vw; /* Offset izquierdo de 1vw */
-                width: calc(45%); /* Mitad del ancho más el offset */
-                height: 3px; /* Alto del borde */
+                top: -1vw; 
+                left: -5vw;
+                width: calc(20%); 
+                height: 3px; 
                 background: linear-gradient(to right, var(--LightPurple) 30%, transparent 30%, transparent 70%, var(--LightPurple) 70%);
-                background-size: 20px 100%; /* Ancho total del dash y del espacio entre ellos */
-                border-radius: 10px 0 0 0;
-            }
+                background-size: 20px 100%; 
+                border-radius: 0 10px 0 0;
+            } */
 
-        .carousel-arrows{
+        /* .carousel-arrows{
             display: flex;
             justify-content: space-between;
-        }
+        } */
 
-            .prev, .next{
+            /* .prev, .next{
                 background: none;
                 outline: none;
                 border: none;
                 z-index: 1;
                 translate: 0 -45vh;
-                opacity: 0.5;
+                opacity: 1;
                 transition: all 0.3s;
             }
 
@@ -525,9 +514,152 @@
 
                 .prev:hover, .next:hover{
                     scale: 1.1;
-                    opacity: 0.8;
+                    opacity: 0.5;
                     cursor: pointer;
-                }
+                } */
+        
+    .slider-container {
+        height: 80vh;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .slider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2vw;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .item {
+        position: absolute;
+        opacity: 0.6;
+        transition: all 0.5s ease-in-out;
+        transform: scale(0.8) translateX(0);
+    }
+
+        .item.active {
+            transform: scale(1) translateX(0);
+            opacity: 1;
+            z-index: 10;
+        }
+
+        .item.prev {
+            transform: scale(0.8) translateX(-15vw);
+            z-index: 5;
+        }
+
+        .item.next {
+            transform: scale(0.8) translateX(15vw);
+            z-index: 5;
+        }
+    
+
+        .slider-arrows{
+            position: absolute;
+            z-index: 20;
+            display: flex;
+            justify-content: space-around;
+            width: 160vw;
+        }
+            .arrow-btn {
+                background: none;
+                outline: none;
+                border: none;
+                opacity: 1;
+                transition: all 0.3s;
+            }
+    
+        .arrow-btn:hover {
+            scale: 1.1;
+                opacity: 0.5;
+                cursor: pointer;
+        }
+
+        .arrow-btn img{
+            width: 2.5vw;
+        }
+
+    .slider-arrows .arrow-btn:nth-child(1) {
+        float: left;
+    }
+    
+    .slider-arrows .arrow-btn:nth-child(2) {
+        float: right;
+    }
+
+.project-cards-container{
+    overflow: hidden;
+    padding: 1vw;
+    margin: -1vw;
+}
+
+/* Project filter */
+
+.filters{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5vh;
+}
+
+    .cbox{
+        overflow:hidden;
+        position:relative;
+        width: 10vw;
+        margin:auto;
+        font-family: "Poppins";
+        font-size: 14px;
+        transition:all 300ms ease;
+    }
+
+    .clabel{
+        display:block;
+        width:100%;
+        background:#3C393E;
+        border-radius:100px;
+        text-align:center;
+        padding:1vh 0;
+        transition:all 300ms ease;
+        cursor: pointer;
+    }
+
+        .cbox:hover {
+            opacity: 0.8;
+            scale: 1.05;
+        }
+    
+    .cinput{
+        position:absolute;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        appearance: none;
+        border:none;
+        padding:0;
+        border-radius:0;
+        vertical-align: middle;
+        transition:all 300ms ease;
+        outline:0;
+    }
+
+        .cinput:focus + label{
+            background:var(--Pink);
+        } 
+        .cinput:active + label {
+            background:var(--Pink);
+        }
+        .cinput:checked + label{
+            background:var(--Pink);
+        }
+
+        .cinput:not(:checked) + .clabel {
+            background: #3C393E; /* Color original */
+        }
+        
 
 /* Contact */
 
@@ -547,7 +679,7 @@
 
     .Contact1{
         position: relative;
-        background-color: var(--Purple);
+        /* background-color: var(--Purple); */
         border-radius: 0 10px 10px 0;
         padding: 4vh 8vh 4vh 6vw;
         margin: 6vh 0 10vh -6vw;
@@ -556,8 +688,8 @@
         .Contact1::before {
             content: '';
             position: absolute;
-            bottom: -1vw; /* Offset superior de 1vw */
-            right: -1vw; /* Offset izquierdo de 1vw */
+            bottom: 1vw; /* Offset superior de 1vw */
+            right: 1vw; /* Offset izquierdo de 1vw */
             width: 3px; /* Ancho del borde */
             height: 50%; /* Altura del borde izquierdo (ajusta como desees) */
             background: linear-gradient(to bottom, var(--LightPurple) 30%, transparent 30%, transparent 70%, var(--LightPurple) 70%); 
@@ -568,9 +700,9 @@
         .Contact1::after {
             content: '';
             position: absolute;
-            bottom: -1vw; /* Offset superior de 1vw */
-            right: -1vw; /* Offset izquierdo de 1vw */
-            width: calc(85% + 1vw); /* Mitad del ancho más el offset */
+            bottom: 1vw; /* Offset superior de 1vw */
+            right: 1vw; /* Offset izquierdo de 1vw */
+            width: calc(80% + 1vw); /* Mitad del ancho más el offset */
             height: 3px; /* Alto del borde */
             background: linear-gradient(to right, var(--LightPurple) 30%, transparent 30%, transparent 70%, var(--LightPurple) 70%);
             background-size: 20px 100%; /* Ancho total del dash y del espacio entre ellos */
@@ -599,28 +731,14 @@
         margin-top: 2vh;
     }
 
-footer{
-    background-color: var(--Purple);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    text-align: right;
-    padding: 0 5vw;
-    height: 12vh;
-}
-
-    footer p{
-        font-size: 10px;
-    }
-
 
 /* Celular */
 
 @media screen and (max-width: 767px) {
     
     .Content{overflow-x: hidden;}
-    h1{font-size: 70px;}
-    h2{font-size: 48px;}
+    h1{font-size: 55px;}
+    h2{font-size: 40px;}
     h3{font-size: 30px;}
     h4{font-size: 20px;}
     p{font-size: 16px;}
@@ -637,7 +755,7 @@ footer{
       .Home{
         flex-direction: row;
         gap: -2vh;
-        padding: 10vh 10vw 10vh 10vw;
+        padding: 20vh 10vw 20vh 10vw;
         position: relative;
       }
       .Home::before {
@@ -655,19 +773,19 @@ footer{
         z-index: -1; /* Asegura que la imagen de fondo esté detrás del contenido */
       }
         .Home-p{
-            font-size: 30px;
+            font-size: 22px;
             margin-bottom: 3vh;
         }
         .Home-gif{
             width: 30vw;
         }
         .Home-img{
-            width: 35vw;
+            width: 45vw;
             margin: -5vh 0 0 0;
         }
     
       /* About */
-      .About, .Experience, .Projects, .Contact-Me{margin-top: 10vh;}
+      .About, .Experience, .Projects, .Contact-Me{margin-top: 3vh;}
           #About-Title{
             flex-direction: row-reverse;
             justify-content: start;
@@ -678,14 +796,11 @@ footer{
             flex-direction: column-reverse;
             align-items: start;
             justify-content: center;
-            margin-top: 0;
+            margin-top: -10vh;
         }
-        .About-img{
-            margin: 0 auto;
-        }
-        #About-img{
-            width: 80vw;
-            margin-right: 5vw;
+        .About-img{display: none;}
+        #About-Title{
+            margin-bottom: 0;
         }
         .About-Me-Section{
             text-align: left;
@@ -694,8 +809,8 @@ footer{
         .About-Tags{justify-content: left;}
         .About-Text {
             border-radius: 10px; 
-            padding: 5vh;
-            margin: 6vh auto;
+            padding: 5vh 0;
+            margin: 0 auto;
         }
         .About-Text::before {height: 0%;}
         .About-Text::after {
@@ -706,9 +821,9 @@ footer{
                             
         /* Skills */
         .Skills{
-            grid-template-columns: repeat(1, 1fr);
+            margin-top: 10vh;
+            column-count: 1;
             grid-gap: 6vh;
-            padding: 5vh;
         }
         .Skills::before {height: 0%;}
         .Skills::after {
@@ -716,19 +831,36 @@ footer{
             right: -2vh; 
             width: calc(80% + 1vh); 
         }
+        .SkillsCard, .LangCard{
+            padding: 4vh 5vh 5vh 5vh;
+            margin-bottom: 5vh;
+        }
+        .LangCard::before{background: none;}
+        .LangCard::after {
+            bottom: -2vh; 
+            right: -2vh; 
+            border-radius: 0 0 0 10px; 
+        }
         .Soft-Skills, .Software-Skills, .Language-Skills{
             padding-top: 3vh;
             border-top: solid 3px white;
         }
-        .CV{
-            width: 60%;
-            padding: 3vh 2vh 2vh 2vh;
+        .btns{
+            justify-content: space-around;
+        }
+        .CV, .More{
+            width: 35vw;
+            padding: 3vh 1vh 2vh 1vh;
+            margin: 3vh 0;
+        }
+        .CV h4, .More h4{
+            font-size: 20px;
         }
     
     /* Experience */
     .Smoke1, .Smoke2, .Contact-img{display: none;}
     .Work-Experience, .Education-Experience, .Extra-Experience {
-        padding: 2vh 5vh 5vh 5vh;
+        padding: 3vh 5vh 5vh 5vh;
         width: auto;
         margin: 6vh 0 0;
     }
@@ -754,37 +886,36 @@ footer{
         left: -2vh; 
         width: calc(80% + 1vh); 
     }
-    
     /* Projects */
+    .Projects-Section{
+        margin-top: -5vh;
+        margin-bottom: -10vh;
+    }
     .Projects{
-        text-align: left;
+        padding: 10vw 0 30vw 0;
     }
-    .project-border::before {
-        bottom: -2vh;
-        right: -3vh;
-        width: calc(40%);
+    .slider-container {
+        height: 60vh;
+        margin-top: -5vh;
     }
-    .project-border::after {
-        top: -2vh; 
-        left: -3vh; 
-        width: calc(40%);
+        .item.prev {transform: scale(0.9) translateX(-80vw);}
+        .item.next {transform: scale(0.9) translateX(80vw);}
+    #projects-more{
+        margin: 0 auto;
     }
-    .prev, .next{translate: 0 -25vh;}
-    .prev img, .next img{width: 1.5vh;}
-    
     /* Contact */
     .Contact-Me{display: block;}
     .Contact-info{width: 100%;}
     .Contact1{
         width: auto;
         border-radius: 10px;
-        padding: 3vh 8vh;
-        margin: 3vh -6vh 6vh;
+        padding: 0vh 8vh 3vh 8vh;
+        margin: -3vh -6vh 6vh -6vh;
     }
     .Contact1::before {height: 0%;}
     .Contact1::after {
         bottom: -2vh; 
-        right: -2vh; 
+        left: 2vh; 
         width: calc(80% + 1vw);
     }
     .icon-section{gap: 2vh;}
@@ -793,31 +924,140 @@ footer{
         gap: 2vh;
         margin-bottom: 4vh;
     }
+    #Contact-Me-Contact-Content{
+        margin-top: 12vh;
+    }
+    /* Filters */
+    #Project-Content{
+        margin-top: 8vh;
+    }
+    #Project-Content .Section-Title{
+        margin-bottom: 2vh;
+    }
+    .filters {
+        display: flex;
+        overflow-x: auto; /* Permite el scroll horizontal */
+        justify-content: flex-start; /* Alinea los elementos al inicio */
+        gap: 2vh; /* Espacio entre elementos */
+        white-space: nowrap; /* Evita que los elementos se envuelvan a la siguiente línea */
+        padding-bottom: 2vh;
+    }
+
+    .cbox {
+        font-size: 12px;
+        width: 30vw; /* Ancho automático según el contenido */
+        flex: 0 0 auto; /* Evita que los elementos se estiren o encojan */
+    }
 }
 
 /* Tablet */
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .Home{
+        padding: 15vh 10vw 20vh 10vw;
+      }
+      #About-Title{
+        flex-direction: row-reverse;
+        justify-content: start;
+      }
+
+    /* About me */ 
     .About-Me{
-        margin-top: -15vh;
-        align-items: center;
+        flex-direction: column-reverse;
+        align-items: start;
+        justify-content: center;
+        margin-top: -5vh;
     }
-    .About-Text {padding: 6vh 6vw 6vh 6vh;}
-    #About-img{
-        width: 45vw;
-        margin-right: 5vw;
+    .About-img{display: none;}
+    #About-Title{
+        margin-bottom: 0;
     }
-    .Skills{padding: 6vh;}
+    .About-Me-Section{
+        text-align: left;
+        width: auto;
+    }
+    .About-Tags{justify-content: left;}
+    .About-Text {
+        border-radius: 10px; 
+        padding: 5vh 0;
+        margin: 0 auto;
+    }
+    .About-Text::before {height: 0%;}
+    .About-Text::after {
+        bottom: -2vh; 
+        left: -2vh; 
+        width: calc(80% + 1vh); 
+    }
     .Work-Experience, .Education-Experience, .Extra-Experience {
         width: auto;
         margin: 6vh 0 0;
         padding: 6vh;
     }
+    #About-Skills-Section{
+        margin-top: 10vh;
+    }
+    #About-Skills-Section .Section-Title, #About-Content .Experience .Section-Title{
+        margin-bottom: 4vh;
+    }
+    .Skills{
+        margin-top: 10vh;
+        column-count: 1;
+    }
+    .SkillsCard, .LangCard{
+        margin-bottom: 6vh;
+        padding: 6vh;
+    }
+    #About-Skills{
+        margin-top: 0;
+    }
+    #About-Content .Experience{
+        margin-top: 10vh;
+    }
+    .LangCard::before{
+        bottom: -2vw;
+        right: -2vw;
+    }
+    .LangCard::after {
+        bottom: -2vw; 
+        right: -2vw; 
+        border-radius: 0 0 0 10px; 
+    }
+    .More, .CV{
+        width: 25vw;
+    }
+    .Projects-Section, .Contact-Me{
+        margin-top: 0;
+    }
+    .slider-container{
+        height: 50vh;
+    }
+    #Project-Content{
+        margin-top: 10vh;
+    }
+    #Project-Content .Section-Title{
+        margin-bottom: 5vh;
+    }
     .Smoke1, .Smoke2{display: none;}
-    .prev, .next{translate: 0 -30vh;}
     .icon1, .icon2{width: 4vh;}
+    #Contact-Content .Contact-Me {
+        margin-top: 10vh;
+    }
     .Contact-info{width: 75%;}
-    .Contact-img{width: 50vw;}
+    .Contact-img{width: 40vw;}
+    .filters {
+        display: flex;
+        overflow-x: auto; /* Permite el scroll horizontal */
+        justify-content: flex-start; /* Alinea los elementos al inicio */
+        gap: 2vh; /* Espacio entre elementos */
+        white-space: nowrap; /* Evita que los elementos se envuelvan a la siguiente línea */
+        padding-bottom: 2vh;
+    }
+
+    .cbox {
+        font-size: 14px;
+        width: 18vw; /* Ancho automático según el contenido */
+        flex: 0 0 auto; /* Evita que los elementos se estiren o encojan */
+    }
   }
 
 /* Responsive Menu */

@@ -1,65 +1,178 @@
 [
     {
-      "name": "Cloudtrack",
-      "description": "We embarked on a challenge to improve the management of internal processes within GDO, a leading company in the distribution of natural gas, focusing on their construction projects with other companies.<br><br>I worked principally on the frontend functions of the app and the implementation of the designs.",
-      "src": "./public/assets/ProjectCloudtrack.png",
-      "tag1": "UI",
-      "tag2": "Code",
+      "name": {
+        "en": "Cloudtrack",
+        "es": "Cloudtrack"
+      },
+      "description": {
+        "en": "We embarked on a challenge to improve the management of internal processes within GDO, a leading company in the distribution of natural gas, focusing on their construction projects with other companies.<br><br>I worked principally on the frontend functions of the app and the implementation of the designs.",
+        "es": "Nos embarcamos en el reto de mejorar el manejo de los procesos internos de GDO, una compañía líder en la distribución de gas natural, enfocandonos en sus proyectos de construcción con otras compañías.<br><br>Trabajé principalmente en la funciones frontend de la aplicación y la implementación de los diseños."
+      },
+      "src": "./public/assets/projects/ProjectCloudtrack.png",
+      "tag1": {
+        "en": "UI",
+        "es": "UI"
+      },
+      "tag2": {
+        "en": "Code",
+        "es": "Código"
+      },
+      "checkValue": ["ui", "code"],
       "link": "https://www.behance.net/gallery/200259979/CloudTrack-GDO",
       "icon": "Behance"
     },
     {
-      "name": "Aves de Cali",
-      "description": "My illustrations of the bird species <i>Piaya cayana</i> where chosen to be part of the book <i>'Aves de Cali'</i>, alongside other students' illustrations.",
-      "src": "./public/assets/ProjectPiayaCayana.jpg",
-      "tag1": "Illustration",
-      "tag2": "Graphic",
+      "name": {
+        "en": "Aves de Cali",
+        "es": "Aves de Cali"
+      },
+      "description": {
+        "en": "My illustrations of the bird species <i>Piaya cayana</i> where chosen to be part of the book <i>'Aves de Cali'</i>, alongside other students' illustrations.",
+        "es": "Mis ilustraciones de la especie de ave <i>Piaya cayana</i> fueron elegidas para ser parte del libro <i>'Aves de Cali'</i>, junto con las ilustraciones de otros estudiantes."
+      },
+      "src": "./public/assets/projects/ProjectPiayaCayana.jpg",
+      "tag1": {
+        "en": "Illustration",
+        "es": "Ilustración"
+      },
+      "tag2": {
+        "en": "Graphic",
+        "es": "Gráfico"
+      },
+      "checkValue": ["illustration", "graphic"],
       "link": "https://www.icesi.edu.co/editorial/aves-de-cali/",
       "icon": "Other"
     },
     {
-      "name": "Ritual of Madness",
-      "description": "Ritual of Madness is a card & online game focused on roles and vote by majority. With their roles, players will be divided in two sides, who will compete against each other.<br><br> I was in charge of the graphic design of the cards and other visual elements.",
-      "src": "./public/assets/ProjectROM.gif",
-      "tag1": "Illustration",
-      "tag2": "Code",
+      "name": {
+        "en": "Ritual of Madness",
+        "es": "Ritual of Madness"
+      },
+      "description": {
+        "en": "Ritual of Madness is a card & online game focused on roles and vote by majority. With their roles, players will be divided in two sides, who will compete against each other.<br><br> I was in charge of the graphic design of the cards and other visual elements.",
+        "es": "Ritual of Madness es un juego online y de cartas que se enfoca en los roles y la votación por mayoría. Con sus roles, los jugadores son divididos en dos grupos, que competirán entre ellos.<br><br> Estuve a cargo del diseño gráfico de las cartas y otros elementos visuales."
+      },
+      "src": "./public/assets/projects/ProjectROM.gif",
+      "tag1": {
+        "en": "Graphic",
+        "es": "Gráfico"
+      },
+      "tag2": {
+        "en": "Code",
+        "es": "Código"
+      },
+      "checkValue": ["code", "graphic", "brand"],
       "link": "https://www.behance.net/gallery/193558463/Ritual-of-madness-Card-Game",
       "icon": "Behance"
     },
     {
-      "name": "Nintendo OOH",
-      "description": "The project consists creating and prototyping an interactive Out-Of-Home experience for Nintendo, with the purpose of captivating new costumers and promoting the brand's products. <br><br> My role was to help build the interface and the great majority of the code.",
-      "src": "./public/assets/ProjectNintendo.jpg",
-      "tag1": "UI",
-      "tag2": "Code",
+      "name": {
+        "en": "Nintendo OOH",
+        "es": "Nintendo OOH"
+      },
+      "description": {
+        "en": "The project consists creating and prototyping an interactive Out-Of-Home experience for Nintendo, with the purpose of captivating new costumers and promoting the brand's products. <br><br> My role was to help build the interface and the great majority of the code.",
+        "es": "El poryecto consiste en crear y prototipar una experiencia Out-Of-Home interactiva para Nintendo, con el proposito de cautivar nuevos consumidores y promocionar los productos de la marca. <br><br> Mi rol fue el de ayudar a construir la interfaz y gran parte del código."
+      },
+      "src": "./public/assets/projects/ProjectNintendo.jpg",
+      "tag1": {
+        "en": "UI",
+        "es": "UI"
+      },
+      "tag2": {
+        "en": "Code",
+        "es": "Código"
+      },
+      "checkValue": ["ui", "code"],
       "link": "https://www.behance.net/gallery/163439649/Nintendo-OOH-Experience",
       "icon": "Behance"
     },
     {
-      "name": "Hina Matsuri",
-      "description": "The objective was to create a series of 5 small illustrations, with the idea of representing a part of the Japanese culture. Hina Matsuri, also known as doll day or girls' day, was the chosen festivity to be represented in this project.",
-      "src": "./public/assets/ProjectHinaMatsuri.png",
-      "tag1": "Illustration",
-      "tag2": "Animation",
+      "name": {
+        "en": "Hina Matsuri",
+        "es": "Hina Matsuri"
+      },
+      "description": {
+        "en": "The objective was to create a series of 5 small illustrations, with the idea of representing a part of the Japanese culture. Hina Matsuri, also known as doll day or girls' day, was the chosen festivity to be represented in this project.",
+        "es": "El objetivo fue crear una serie de 5 pequeñas ilustraciones, con la idea de representar una parte de la cultura japonesa. Hina Matsuri, también conocido como el día de las muñecas o el día de las niñas, fue la festividad escogida para ser representada."
+      },
+      "src": "./public/assets/projects/ProjectHinaMatsuri.png",
+      "tag1": {
+        "en": "Illustration",
+        "es": "Ilustración"
+      },
+      "tag2": {
+        "en": "Animation",
+        "es": "Animación"
+      },
+      "checkValue": ["illustration", "animation"],
       "link": "https://www.behance.net/gallery/205842443/Hina-Matsuri-Illustration-animation",
       "icon": "Behance"
     },
     {
-      "name": "Tesla poster",
-      "description": "This project aims to create a commemorative poster in honor of the inventor Nikola Tesla, highlighting his contribution to the world of science and technology.",
-      "src": "./public/assets/ProjectTesla.png",
-      "tag1": "Illustration",
-      "tag2": "Graphic",
+      "name": {
+        "en": "Tesla Poster",
+        "es": "Póster Tesla"
+      },
+      "description": {
+        "en": "This project aims to create a commemorative poster in honor of the inventor Nikola Tesla, highlighting his contribution to the world of science and technology.",
+        "es": "Este proyecto busca crear un póster conmemorativo en honor del inventor Nikola Tesla, destacando su contribución al mundo de la ciencia y la tecnología."
+      },
+      "src": "./public/assets/projects/ProjectTesla.png",
+      "tag1": {
+        "en": "Illustration",
+        "es": "Ilustración"
+      },
+      "tag2": {
+        "en": "Graphic",
+        "es": "Gráfico"
+      },
+      "checkValue": ["illustration", "graphic"],
       "link": "https://www.behance.net/gallery/120372203/Nikola-Tesla-poster-design-isabella-Barona",
       "icon": "Behance"
     },
     {
-      "name": "Hard Rock poster",
-      "description": "This project aims to create a poster based on the most iconic characteristics, festivities or places of the city New Orleans. Mardi Grass was chosen to represent this city, along with some of the most important of this festivity.",
-      "src": "./public/assets/ProjectHardRock.png",
-      "tag1": "Illustration",
-      "tag2": "Graphic",
+      "name": {
+        "en": "Hard Rock Poster",
+        "es": "Póster Hard Rock"
+      },
+      "description": {
+        "en": "This project aims to create a poster based on the most iconic characteristics, festivities or places of the city New Orleans. Mardi Grass was chosen to represent this city, along with some of the most important symbols of this festivity.",
+        "es": "Este proyecto busca crear un póster basado en las características, las festividades o los lugar más icónicos de la ciudad New Orleans. Mardi Grass fue elegido para representar esta ciudad, junto con los símbolos más importantes de esta festividad."
+      },
+      "src": "./public/assets/projects/ProjectHardRock.png",
+      "tag1": {
+        "en": "Illustration",
+        "es": "Ilustración"
+      },
+      "tag2": {
+        "en": "Graphic",
+        "es": "Gráfico"
+      },
+      "checkValue": ["illustration", "graphic"],
       "link": "https://www.behance.net/gallery/119618015/Hard-Rock-Cafe-New-Orleans-Isabella-Barona",
+      "icon": "Behance"
+    },
+    {
+      "name": {
+        "en": "Mauritius Country Brand",
+        "es": "Marca País Mauricio"
+      },
+      "description": {
+        "en": "The objective was to design the brand for the country Mauritius, a small country located in the Indian Ocean, famous for its beautiful touristic places.",
+        "es": "El objetivo fue diseñar la marca para el país Mauricio, un pequeño país ubicado en el Océano Índico, famoso por sus hermosos destinos turísticos."
+      },
+      "src": "./public/assets/projects/ProjectMauritius.png",
+      "tag1": {
+        "en": "Graphic",
+        "es": "Gráfico"	
+      },
+      "tag2": {
+        "en": "Brand",
+        "es": "Marca"
+      },
+      "checkValue": ["graphic", "brand"],
+      "link": "https://www.behance.net/gallery/139578265/Country-brand-design-Mauritius",
       "icon": "Behance"
     }
   ]

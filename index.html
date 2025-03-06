@@ -4,38 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ibaro Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="./public/assets/Favicon.svg">
+    <link rel="icon" type="image/x-icon" href="./public/assets/favicon.svg">
     <link rel="stylesheet" href="./public/style.css">
 </head>
 <body>
 
-    <header>
-        <div class="logo">
-            <a href="#Home">
-                <img class="header-logo" src="./public/assets/Logo.svg">
-            </a>
-        </div>
-        
-        <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+    <custom-header></custom-header>
 
-        <ul class="header-nav" id="navMenu">
-            <p><a class="nav-link" href="#Home">Home</a></p>
-            <p><a class="nav-link" href="#About">About</a></p>
-            <p><a class="nav-link" href="#Experience">Experience</a></p>
-            <p><a class="nav-link" href="#Projects">Projects</a></p>
-            <p><a class="nav-link" href="#Contact-Me">Contact me</a></p>
-        </ul>
-    </header>
+    <div class="overlay" id="overlay"></div>
 
-    <div class="Content">
-        <div class="overlay" id="overlay"></div>
+    <div id="Content" class="Content">
         <div class="Home" id="Home">
             <div>
-                <p class="Home-p">Hi, I'm</p>
+                <p data-translation="home.name" class="Home-p">Hi, I'm</p>
                 <h1>IBaro</h1>
                 <img class="Home-gif" src="./public/assets/TagGif.gif">
             </div>
@@ -52,7 +33,7 @@
                     <div>
                         <div class="Section-Title" id="About-Title">
                             <img src="./public/assets/Star.svg">
-                            <h2>About me</h2>
+                            <h2 data-translation="about.title">About me</h2>
                         </div>
                         <p>Isabella Barona</p>
                         <div class="About-Tags">
@@ -61,150 +42,111 @@
                         </div>
                     </div>
                     <div class="About-Text">
-                        <p>I’m an UI designer and illustrator with a great sense of responsibility and organization, which allows me to manage design projects with efficiency and creativity. </p>
-                        <p>I focus on providing aesthetic solutions that enhance the user experience with a high level of detail.</p>
+                        <p data-translation="about.text1">I’m an UI designer and illustrator with a great sense of responsibility and organization, which allows me to manage design projects with efficiency and creativity. </p><br>
+                        <p data-translation="about.text2">I focus on providing aesthetic solutions that enhance the user experience with a high level of detail.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="Skills">
-                    <div class="Hard-Skills">
-                        <h3>Skills</h3>
-                        <skill-list label="UI Design" level="4"></skill-list>
-                        <skill-list label="UX Design" level="3"></skill-list>
-                        <skill-list label="Brand identity" level="3"></skill-list>
-                        <skill-list label="Digital Illustration" level="4"></skill-list>
-                        <skill-list label="Traditional illustration" level="4"></skill-list>
+            <div class="Skills-Section">
+                <div class="Skills">
+                    <div class="SkillsCard">
+                        <h3 data-translation="skills.skills.title">Skills</h3>
+                        <skill-list data-translation="skills.skills.ui" level="4"></skill-list>
+                        <skill-list data-translation="skills.skills.ux" level="3"></skill-list>
+                        <skill-list data-translation="skills.skills.brand" level="3"></skill-list>
+                        <skill-list data-translation="skills.skills.digital" level="4"></skill-list>
+                        <skill-list data-translation="skills.skills.traditional" level="4"></skill-list>
                         <skill-list label="Motion Graphics" level="2"></skill-list>
                     </div>
-
-                    <div class="Soft-Skills">
-                        <h3>Soft skills</h3>
-                        <skill-list label="Adaptability" level="4"></skill-list>
-                        <skill-list label="Creativity" level="4"></skill-list>
-                        <skill-list label="Strategic thinking" level="4"></skill-list>
-                        <skill-list label="Time management" level="3"></skill-list>
-                        <skill-list label="Teamwork" level="3"></skill-list>
-                    </div>
-
-                    <div class="Software-Skills">
+                    
+                    <div class="SkillsCard">
                         <h3>Software</h3>
-                        <skill-list label="Adobe Suite" level="4"></skill-list>
+                        <skill-list data-translation="skills.software.adobe" level="4"></skill-list>
                         <skill-list label="Figma" level="4"></skill-list>
                         <skill-list label="Krita" level="3"></skill-list>
                         <skill-list label="HTML - JS - CSS" level="3"></skill-list>
                     </div>
 
-                    <div class="Language-Skills">
-                        <h3>Language</h3>
-                        <skill-list label="Spanish" text="Native"></skill-list>
-                        <skill-list label="English" text="C1"></skill-list>
-                    </div>
-            </div>
-
-            <a href="./public/assets/CV.pdf" target="_blank">
-                <div class="CV">
-                    <h4>Check my CV</h4>
-                </div>
-            </a>
-        </div>
-        
-        <div class="Experience" id="Experience">
-            <div class="Section-Title">
-                <h2>Experience</h2>
-                <img src="./public/assets/Star.svg">
-            </div>
-
-            <div class="Smoke1">
-                <img src="./public/assets/Smoke1.svg">
-            </div>
-
-            <div class="Experience-Items">
-                <div class="Work-Experience">
-                    <h3>Work Experience</h3>
-                    <div class="Experience-Inner-Items">
-                        <div class="Experience-Group">
-                            <p class="Small-Text">September 2024 - Present day</p>
-                            <h4>Illustrator</h4>
-                            <p>Trans-pasando Fronteras Magazine, Cali</p>
-                        </div>
-                        <div class="Experience-Group">
-                            <p class="Small-Text">August 2024 - Present day</p>
-                            <h4>Monitor</h4>
-                            <p>UXLabICESI, Cali</p>
-                        </div>
-                        <div class="Experience-Group">
-                            <p class="Small-Text">February 2024 - July 2024</p>
-                            <h4>UI designer and frontend developer </h4>
-                            <p>Gases de Occidente, Cali</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="Education-Experience">
-                    <h3>Education</h3>
-                    <div class="Experience-Inner-Items">
-                        <div class="Experience-Group">
-                            <p class="Small-Text">2021 - 2025</p>
-                            <h4>Interactive Media Design</h4>
-                            <p>Universidad ICESI, Cali</p>
-                            <div class="Achievements">
-                                <p><b>Achievements</b></p>
-                                <ul>
-                                    <li>Academic Excellence Scholarship - Silver category</li>
-                                    <li>Honor Roll 2021-2 - Category 1</li>
-                                    <li>Pixel Media award– 1stplace for Audiovisual production</li>
-                                </ul>
+                    <div class="SkillsCard">
+                        <h3 data-translation="experience.work.title">Work Experience</h3>
+                        <div class="Experience-Inner-Items">
+                            <div class="Experience-Group">
+                                <p data-translation="experience.work.group1.date" class="Small-Text">September 2024 - Present day</p>
+                                <h4 data-translation="experience.work.group1.job">Illustrator</h4>
+                                <p data-translation="experience.work.group1.place">Trans-pasando Fronteras Magazine, Cali</p>
+                            </div>
+                            <div class="Experience-Group">
+                                <p data-translation="experience.work.group2.date" class="Small-Text">August 2024 - Present day</p>
+                                <h4 data-translation="experience.work.group2.job">Monitor</h4>
+                                <p>UXLabICESI, Cali</p>
+                            </div>
+                            <div class="Experience-Group">
+                                <p data-translation="experience.work.group3.date" class="Small-Text">February 2024 - July 2024</p>
+                                <h4 data-translation="experience.work.group3.job">UI designer and frontend developer </h4>
+                                <p>Gases de Occidente, Cali</p>
                             </div>
                         </div>
-                        <div class="Experience-Group">
-                            <p class="Small-Text">2014 - 2020</p>
-                            <h4>High School</h4>
-                            <p>Liceo Benalcázar, Cali</p>
-                        </div>
                     </div>
-                </div>
-
-                <div class="Extra-Experience">
-                    <h3>Extracurriculars</h3>
-                    <div class="Experience-Inner-Items">
-                        <div class="Experience-Group">
-                            <p class="Small-Text">July 2024 - Present day</p>
-                            <h4>Design committee leader</h4>
-                            <p>Güinev student group</p>
-                        </div>
+                    
+                    <div class="LangCard">
+                        <h3 data-translation="skills.language.title">Language</h3>
+                        <skill-list data-translation="skills.language.es" data-translation-text="skills.language.esText"></skill-list>
+                        <skill-list data-translation="skills.language.en" text="C1"></skill-list>
                     </div>
                 </div>
             </div>
 
-            <div class="Smoke2">
-                <img src="./public/assets/Smoke2.svg">
+            <div class="btns">
+                <a onclick="aboutDisplay()">
+                    <div class="More">
+                        <h4 data-translation="btns.more">See more</h4>
+                    </div>
+                </a>
+    
+                <a id="CV" href="./public/assets/CV-en.pdf" target="_blank">
+                    <div class="CV">
+                        <h4 data-translation="btns.cv">Check my CV</h4>
+                    </div>
+                </a>
             </div>
-
         </div>
 
-        <div class="Projects" id="Projects">
-            <div class="Section-Title" id="Projects-Title">
-                <img src="./public/assets/Star.svg">
-                <h2>Projects</h2>
-                <img src="./public/assets/Star.svg">
-            </div>
-            <div class="carousel">
-                <div class="project-border">
+        <div class="Projects-Section">
+            <div class="Projects" id="Projects">
+                <div class="Section-Title" id="Projects-Title">
+                    <img src="./public/assets/Star.svg">
+                    <h2 data-translation="projects">Projects</h2>
+                    <img src="./public/assets/Star.svg">
+                </div>
+                <!-- <div class="carousel">
+                    <div class="project-border">
                         <div class="carousel-container"></div>
+                    </div>
+                    <div class="carousel-arrows">
+                        <button class="prev"><img src="./public/assets/Prev.svg"></button>
+                        <button class="next"><img src="./public/assets/Next.svg"></button>
+                    </div>
+                </div> -->
+
+                <div class="slider-container">
+                    <div class="slider"></div>
+                    <div class="slider-arrows">
+                        <button class="arrow-btn"><img src="./public/assets/Prev.svg"></button>
+                        <button class="arrow-btn"><img src="./public/assets/Next.svg"></button>
+                    </div>
                 </div>
-                <div class="carousel-arrows">
-                    <button class="prev"><img src="./public/assets/Prev.svg"></button>
-                    <button class="next"><img src="./public/assets/Next.svg"></button>
+                
+                <div id="projects-more" class="More" onclick="projectsDisplay()">
+                    <h4 data-translation="btns.more">See more</h4>
                 </div>
             </div>
-
         </div>
 
         <div class="Contact-Me" id="Contact-Me">
             <div class="Contact-info">
                 <div class="Section-Title">
-                    <h2>Contact me</h2>
+                    <h2 data-translation="contact.title">Contact me</h2>
                     <img src="./public/assets/Star.svg">
                 </div>
                 <div class="Contact1">
@@ -217,7 +159,7 @@
                         <p>+57 316 776 8002</p>
                     </div>
                 </div>
-                <h3>Follow me in</h3>
+                <h3 data-translation="contact.follow">Follow me in</h3>
                 <div class="Contact2">
                     <a href="https://www.linkedin.com/in/isabella-barona/" target="_blank">
                         <img class="icon2" src="./public/assets/Linkedin.svg" alt="LinkedIn">
@@ -237,14 +179,255 @@
 
     </div>
 
-    <footer>
-        <img class="logo" src="./public/assets/Logo.svg">
-        <div>
-            <p>Developed by Isabella Barona 2024</p>
-            <p>Deployed in Github Pages</p>
-        </div>
-    </footer>
+    <!-- About -->
 
-    <script src="./public/index.js"></script>
+    <div id="About-Content" class="Content">
+
+        <div class="About" id="About">
+            <div class="About-Me">
+                <div class="About-img">
+                    <img id="About-img" src="./public/assets/About.svg">
+                </div>
+
+                <div class="About-Me-Section">
+                    <div>
+                        <div class="Section-Title" id="About-Title">
+                            <img src="./public/assets/Star.svg">
+                            <h2 data-translation="about.title">About me</h2>
+                        </div>
+                        <p>Isabella Barona</p>
+                        <div class="About-Tags">
+                            <custom-tag type="pink" label="21-04-2003"></custom-tag>
+                            <custom-tag type="purple" label="Cali, Colombia"></custom-tag>
+                        </div>
+                    </div>
+                    <div class="About-Text">
+                        <p data-translation="about.text1">I’m an UI designer and illustrator with a great sense of responsibility and organization, which allows me to manage design projects with efficiency and creativity. </p><br>
+                        <p data-translation="about.text2">I focus on providing aesthetic solutions that enhance the user experience with a high level of detail.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Skills-Section" id="About-Skills-Section">
+                <div class="Section-Title">
+                    <h2 data-translation="skills.title">Skills</h2>
+                    <img src="./public/assets/Star.svg">
+                </div>
+
+                <div class="Skills" id="About-Skills">
+                    <div class="SkillsCard">
+                        <h3 data-translation="skills.skills.title">Skills</h3>
+                        <skill-list data-translation="skills.skills.ui" level="4"></skill-list>
+                        <skill-list data-translation="skills.skills.ux" level="3"></skill-list>
+                        <skill-list data-translation="skills.skills.brand" level="3"></skill-list>
+                        <skill-list data-translation="skills.skills.digital" level="4"></skill-list>
+                        <skill-list data-translation="skills.skills.traditional" level="4"></skill-list>
+                        <skill-list label="Motion Graphics" level="2"></skill-list>
+                    </div>
+                    
+                    <div class="SkillsCard">
+                        <h3 data-translation="skills.softskills.title">Soft skills</h3>
+                        <skill-list data-translation="skills.softskills.adapt" level="4"></skill-list>
+                        <skill-list data-translation="skills.softskills.create" level="4"></skill-list>
+                        <skill-list data-translation="skills.softskills.strategy" level="4"></skill-list>
+                        <skill-list data-translation="skills.softskills.time" level="3"></skill-list>
+                        <skill-list data-translation="skills.softskills.team" level="3"></skill-list>
+                    </div>
+                    
+                    <div class="SkillsCard">
+                        <h3>Software</h3>
+                        <skill-list data-translation="skills.software.adobe" level="4"></skill-list>
+                        <skill-list label="Figma" level="4"></skill-list>
+                        <skill-list label="Krita" level="3"></skill-list>
+                        <skill-list label="HTML - JS - CSS" level="3"></skill-list>
+                    </div>
+                    
+                    <div class="LangCard" id="LangCard">
+                        <h3 data-translation="skills.language.title">Language</h3>
+                        <skill-list data-translation="skills.language.es" data-translation-text="skills.language.esText"></skill-list>
+                        <skill-list data-translation="skills.language.en" text="C1"></skill-list>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="Experience" id="Experience">
+            <div class="Section-Title">
+                <h2 data-translation="experience.title">Experience</h2>
+                <img src="./public/assets/Star.svg">
+            </div>
+
+            <div class="Smoke1">
+                <img src="./public/assets/Smoke1.svg">
+            </div>
+
+            <div class="Experience-Items">
+                <div class="Work-Experience">
+                    <h3 data-translation="experience.work.title">Work Experience</h3>
+                    <div class="Experience-Inner-Items">
+                        <div class="Experience-Group">
+                            <p data-translation="experience.work.group1.date" class="Small-Text">September 2024 - Present day</p>
+                            <h4 data-translation="experience.work.group1.job">Illustrator</h4>
+                            <p data-translation="experience.work.group1.place">Trans-pasando Fronteras Magazine, Cali</p>
+                        </div>
+                        <div class="Experience-Group">
+                            <p data-translation="experience.work.group2.date" class="Small-Text">August 2024 - Present day</p>
+                            <h4 data-translation="experience.work.group2.job">Monitor</h4>
+                            <p>UXLabICESI, Cali</p>
+                        </div>
+                        <div class="Experience-Group">
+                            <p data-translation="experience.work.group3.date" class="Small-Text">February 2024 - July 2024</p>
+                            <h4 data-translation="experience.work.group3.job">UI designer and frontend developer </h4>
+                            <p>Gases de Occidente, Cali</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="Education-Experience">
+                    <h3 data-translation="experience.education.title">Education</h3>
+                    <div class="Experience-Inner-Items">
+                        <div class="Experience-Group">
+                            <p class="Small-Text">2021 - 2025</p>
+                            <h4 data-translation="experience.education.group1.title">Interactive Media Design</h4>
+                            <p>Universidad ICESI, Cali</p>
+                            <div class="Achievements">
+                                <p data-translation="experience.education.group1.achieve"><b>Achievements</b></p>
+                                <ul>
+                                    <li data-translation="experience.education.group1.li1">Academic Excellence Scholarship - Silver category</li>
+                                    <li data-translation="experience.education.group1.li2">Honor Roll 2021-2 - Category 1</li>
+                                    <li data-translation="experience.education.group1.li3">Pixel Media award– 1stplace for Audiovisual production</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="Experience-Group">
+                            <p class="Small-Text">2014 - 2020</p>
+                            <h4 data-translation="experience.education.group2.title">High School</h4>
+                            <p>Liceo Benalcázar, Cali</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="Extra-Experience">
+                    <h3 data-translation="experience.extra.title">Extracurriculars</h3>
+                    <div class="Experience-Inner-Items">
+                        <div class="Experience-Group">
+                            <p data-translation="experience.extra.group1.date" class="Small-Text">July 2024 - Present day</p>
+                            <h4 data-translation="experience.extra.group1.job">Design committee leader</h4>
+                            <p data-translation="experience.extra.group1.place">Güinev student group</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Smoke2">
+                <img src="./public/assets/Smoke2.svg">
+            </div>
+        </div>
+        <div class="btns">
+            <a id="CV" href="./public/assets/CV-en.pdf" target="_blank">
+                <div class="CV">
+                    <h4 data-translation="btns.cv">Check my CV</h4>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Projects -->
+
+    <div id="Project-Content" class="Content">
+
+        <div class="Section-Title" id="Projects-Title">
+            <img src="./public/assets/Star.svg">
+            <h2 data-translation="projects">Projects</h2>
+            <img src="./public/assets/Star.svg">
+        </div>
+
+        <div class="filters">
+            <div class="cbox">
+                <input class="cinput" type="checkbox" id="cb1" value="all" />
+                <label class="clabel" for="cb1" data-translation="filters.all">All</label>
+            </div>
+
+            <div class="cbox">
+                <input class="cinput" type="checkbox" id="cb2" value="ui" />
+                <label class="clabel" for="cb2" data-translation="filters.ui">UI Design</label>
+            </div>
+
+            <div class="cbox">
+                <input class="cinput" type="checkbox" id="cb3" value="ux" />
+                <label class="clabel" for="cb3" data-translation="filters.ux">UX Design</label>
+            </div>
+
+            <div class="cbox">
+                <input class="cinput" type="checkbox" id="cb4" value="code" />
+                <label class="clabel" for="cb4" data-translation="filters.code">Code</label>
+            </div>
+
+            <div class="cbox">
+                <input class="cinput" type="checkbox" id="cb5" value="graphic" />
+                <label class="clabel" for="cb5" data-translation="filters.graphic">Graphic Design</label>
+            </div>
+
+            <div class="cbox">
+                <input class="cinput" type="checkbox" id="cb6" value="brand" />
+                <label class="clabel" for="cb6" data-translation="filters.brand">Brand Design</label>
+            </div>
+
+            <div class="cbox">
+                <input class="cinput" type="checkbox" id="cb7" value="illustration" />
+                <label class="clabel" for="cb7" data-translation="filters.illustration">Illustration</label>
+            </div>
+
+            <div class="cbox">
+                <input class="cinput" type="checkbox" id="cb8" value="animation" />
+                <label class="clabel" for="cb8" data-translation="filters.animation">Animation</label>
+            </div>
+        </div>
+
+        <div class="project-cards-container"></div>
+    </div>
+    
+    <!-- Contact -->
+
+    <div id="Contact-Content" class="Content">
+
+        <div class="Contact-Me" id="Contact-Me-Contact-Content">
+            <div class="Contact-info">
+                <div class="Section-Title">
+                    <h2 data-translation="contact.title">Contact me</h2>
+                    <img src="./public/assets/Star.svg">
+                </div>
+                <div class="Contact1">
+                    <div class="icon-section">
+                        <img class="icon1" src="./public/assets/Email.svg">
+                        <p>isabella.baronap@gmail.com</p>
+                    </div>
+                    <div class="icon-section">
+                        <img class="icon1" src="./public/assets/Whatsapp.svg">
+                        <p>+57 316 776 8002</p>
+                    </div>
+                </div>
+                <h3 data-translation="contact.follow">Follow me in</h3>
+                <div class="Contact2">
+                    <a href="https://www.linkedin.com/in/isabella-barona/" target="_blank">
+                        <img class="icon2" src="./public/assets/Linkedin.svg" alt="LinkedIn">
+                    </a>
+                    <a href="https://www.behance.net/IsabellaBarona21" target="_blank">
+                        <img class="icon2" src="./public/assets/Behance.svg" alt="Behance">
+                    </a>
+                    <a href="https://www.instagram.com/bari.techni?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+                        <img class="icon2" src="./public/assets/Instagram.svg" alt="Instagram">
+                    </a>
+                </div>                
+            </div>
+            <div >
+                <img class="Contact-img" src="./public/assets/Contact.svg">
+            </div>
+        </div>
+    </div>
+
+    <custom-footer></custom-footer>
+
+    <script type="module" src="./public/index.js" defer></script>
 </body>
 </html>

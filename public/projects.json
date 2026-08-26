@@ -23,28 +23,6 @@
     },
     {
       "name": {
-        "en": "Aves de Cali",
-        "es": "Aves de Cali"
-      },
-      "description": {
-        "en": "My illustrations of the bird species <i>Piaya cayana</i> where chosen to be part of the book <i>'Aves de Cali'</i>, alongside other students' illustrations.",
-        "es": "Mis ilustraciones de la especie de ave <i>Piaya cayana</i> fueron elegidas para ser parte del libro <i>'Aves de Cali'</i>, junto con las ilustraciones de otros estudiantes."
-      },
-      "src": "./public/assets/projects/ProjectPiayaCayana.jpg",
-      "tag1": {
-        "en": "Illustration",
-        "es": "Ilustración"
-      },
-      "tag2": {
-        "en": "Graphic",
-        "es": "Gráfico"
-      },
-      "checkValue": ["illustration", "graphic"],
-      "link": "https://www.icesi.edu.co/editorial/aves-de-cali/",
-      "icon": "Other"
-    },
-    {
-      "name": {
         "en": "Ritual of Madness",
         "es": "Ritual of Madness"
       },
@@ -65,6 +43,54 @@
       "link": "https://www.behance.net/gallery/193558463/Ritual-of-madness-Card-Game",
       "icon": "Behance"
     },
+
+    {
+      "name": {
+        "en": "Nova Ars",
+        "es": "Nova Ars"
+      },
+      "description": {
+        "en": "This project consists in an app with which an user will be able to access information and details about artworks and artists through XR, allowing people to live the experience of going to a museum without needing to really be in it.",
+        "es": "Este proyecto consiste en una app desde la cual un usuario podra ser capaz de acceder a la información y detalles de obras de arte y artistas por medio de XR, permitiendo a las personas vivir la experiencia de ir a un museo sin tener que realmente estar en uno."
+      },
+      "src": "./public/assets/projects/ProjectNovaArs.png",
+      "tag1": {
+        "en": "UI",
+        "es": "UI"
+      },
+      "tag2": {
+        "en": "UX",
+        "es": "UX"
+      },
+      "checkValue": ["ui", "ux"],
+      "link": "https://www.behance.net/gallery/158008873/XR-Art-App-Nova-Ars",
+      "icon": "Behance"
+    },
+
+    {
+      "name": {
+        "en": "Fitmate",
+        "es": "Fitmate"
+      },
+      "description": {
+        "en": "The project explores the struggles people face in staying motivated and physically active. It involves UX research to understand user needs and behaviors, followed by the design and development of a interactive prototype.",
+        "es": "El poryecto explora las dificultades que las personas enfrentan al mantenerse motivados y físicamente activos. Incluye un proceso de investigación UX necesario para entender las necesidades y comportamientos de los usuarios, seguido del diseño y desarrollo de un prototipo interactivo."
+      },
+      "src": "./public/assets/projects/ProjectFitmate.png",
+      "tag1": {
+        "en": "UI",
+        "es": "UI"
+      },
+      "tag2": {
+        "en": "UX",
+        "es": "UX"
+      },
+      "checkValue": ["ui", "ux"],
+      "link": "https://www.behance.net/gallery/169200729/FitMate-UXUI",
+      "icon": "Behance"
+    },
+
+
     {
       "name": {
         "en": "Nintendo OOH",
@@ -86,6 +112,28 @@
       "checkValue": ["ui", "code"],
       "link": "https://www.behance.net/gallery/163439649/Nintendo-OOH-Experience",
       "icon": "Behance"
+    },
+    {
+      "name": {
+        "en": "Aves de Cali",
+        "es": "Aves de Cali"
+      },
+      "description": {
+        "en": "My illustrations of the bird species <i>Piaya cayana</i> where chosen to be part of the book <i>'Aves de Cali'</i>, alongside other students' illustrations.",
+        "es": "Mis ilustraciones de la especie de ave <i>Piaya cayana</i> fueron elegidas para ser parte del libro <i>'Aves de Cali'</i>, junto con las ilustraciones de otros estudiantes."
+      },
+      "src": "./public/assets/projects/ProjectPiayaCayana.jpg",
+      "tag1": {
+        "en": "Illustration",
+        "es": "Ilustración"
+      },
+      "tag2": {
+        "en": "Graphic",
+        "es": "Gráfico"
+      },
+      "checkValue": ["illustration", "graphic"],
+      "link": "https://www.icesi.edu.co/editorial/aves-de-cali/",
+      "icon": "Other"
     },
     {
       "name": {

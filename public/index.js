@@ -45,6 +45,19 @@ const AboutContent = document.getElementById("About-Content");
 const ProjectContent = document.getElementById("Project-Content");
 const ContactContent = document.getElementById("Contact-Content");
 
+// Sincroniza el link "active" del header, sin importar desde dónde
+// se haya disparado la navegación (header o un botón externo como "See more")
+function setActiveNavLink(linkId) {
+  const header = document.querySelector('custom-header');
+  if (!header || !header.shadowRoot) return;
+
+  header.shadowRoot.querySelectorAll('.nav-link').forEach((link) => {
+    link.classList.remove('active');
+  });
+
+  const activeLink = header.shadowRoot.getElementById(linkId);
+  if (activeLink) activeLink.classList.add('active');
+}
 
 window.mainDisplay = function (event) {
   if (event) event.preventDefault(); // Verifica que event existe antes de llamarlo
@@ -52,6 +65,8 @@ window.mainDisplay = function (event) {
   AboutContent.style.display = "none";
   ProjectContent.style.display = "none";
   ContactContent.style.display = "none";
+
+  setActiveNavLink('home-link');
 
   window.scrollTo({
     top: 0,
@@ -66,6 +81,8 @@ window.aboutDisplay = function (event) {
   ProjectContent.style.display = "none";
   ContactContent.style.display = "none";
 
+  setActiveNavLink('about-link');
+
   window.scrollTo({
     top: 0,
     behavior: "smooth", // Hace la animación suave
@@ -79,6 +96,8 @@ window.projectsDisplay = function (event) {
   ProjectContent.style.display = "block";
   ContactContent.style.display = "none";
 
+  setActiveNavLink('projects-link');
+
   window.scrollTo({
     top: 0,
     behavior: "smooth", // Hace la animación suave
@@ -91,6 +110,8 @@ window.contactDisplay = function (event) {
   AboutContent.style.display = "none";
   ProjectContent.style.display = "none";
   ContactContent.style.display = "block";
+
+  setActiveNavLink('contact-link');
 
   window.scrollTo({
     top: 0,

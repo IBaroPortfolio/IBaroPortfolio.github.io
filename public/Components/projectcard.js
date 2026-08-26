@@ -3,49 +3,96 @@ import './tag.js';
 // Detectar el idioma actual
 let currentLanguage = localStorage.getItem('language') || 'en';
 
+// Guardamos referencia a los datos y al último filtro aplicado
+// para poder re-renderizar cuando cambia el tamaño de la ventana
+let allData = [];
+let currentFilteredData = [];
+let currentNumColumns = 3;
+
 fetch('./public/projects.json')
   .then(response => response.json())
   .then(data => {
+    allData = data;
+    currentFilteredData = data;
+
     const projectCardsContainer = document.querySelector('.project-cards-container');
     const checkboxes = document.querySelectorAll('.cinput');
     const allCheckbox = document.querySelector("#cb1");
 
-    // Estilos de la grilla de proyectos
-    function updateColumnCount() {
-      if (window.innerWidth <= 767) {
-          projectCardsContainer.style.columnCount = '1';
-          projectCardsContainer.style.margin = '0 auto'; 
-      } else if (window.innerWidth >= 768 && window.innerWidth <= 1023) {
-        projectCardsContainer.style.columnCount = '2';
-        projectCardsContainer.style.margin = '0 auto'; 
-        projectCardsContainer.style.columnGap = '3vh'; 
-      } else {
-          projectCardsContainer.style.columnCount = '3';
-          projectCardsContainer.style.columnGap = '3vw'; 
-      }
-    }
-  
-    // Ejecutar la función al cargar la página
-    updateColumnCount();
-  
-    // Ejecutar la función cada vez que se redimensiona la ventana
-    window.addEventListener('resize', updateColumnCount);
+    // Preparamos el contenedor como flex-row: va a alojar N divs de columna
+    projectCardsContainer.style.display = 'flex';
+    projectCardsContainer.style.alignItems = 'flex-start';
     projectCardsContainer.style.transition = 'transform 0.5s ease-in-out';
 
-    function renderProjects(filteredData = data) {
+    // Reparte los items en N columnas de forma balanceada
+    // Ej: 10 items / 3 columnas -> [4,3,3] | 8 items / 3 -> [3,3,2] | 2 items / 3 -> [1,1,0]
+    function distributeIntoColumns(data, numColumns) {
+      const base = Math.floor(data.length / numColumns);
+      const remainder = data.length % numColumns;
+      const columns = [];
+      let index = 0;
+
+      for (let i = 0; i < numColumns; i++) {
+        const size = base + (i < remainder ? 1 : 0);
+        columns.push(data.slice(index, index + size));
+        index += size;
+      }
+
+      return columns;
+    }
+
+    // Determina cuántas columnas según el ancho de pantalla
+    function getNumColumns() {
+      if (window.innerWidth <= 767) return 1;
+      if (window.innerWidth >= 768 && window.innerWidth <= 1023) return 2;
+      return 3;
+    }
+
+    // Aplica los estilos de espaciado/márgenes del contenedor según breakpoint
+    function updateContainerStyles(numColumns) {
+      if (numColumns === 1) {
+        projectCardsContainer.style.margin = '0 auto';
+        projectCardsContainer.style.gap = '0';
+      } else if (numColumns === 2) {
+        projectCardsContainer.style.margin = '0 auto';
+        projectCardsContainer.style.gap = '3vh';
+      } else {
+        projectCardsContainer.style.margin = '';
+        projectCardsContainer.style.gap = '3vw';
+      }
+    }
+
+    function renderProjects(filteredData = currentFilteredData) {
+      currentFilteredData = filteredData; // guardamos para re-render en resize
+      currentNumColumns = getNumColumns();
+
       projectCardsContainer.innerHTML = ''; // Limpiar antes de volver a renderizar
+      updateContainerStyles(currentNumColumns);
 
-      filteredData.forEach(project => {
-        const projectComponent = document.createElement('project-cards');
-        projectComponent.setAttribute('name', project.name[currentLanguage]);
-        projectComponent.setAttribute('description', project.description[currentLanguage]);
-        projectComponent.setAttribute('src', project.src);
-        projectComponent.setAttribute('tag1', project.tag1[currentLanguage]);
-        projectComponent.setAttribute('tag2', project.tag2[currentLanguage]);
-        projectComponent.setAttribute('link', project.link);
-        projectComponent.setAttribute('icon', project.icon);
+      const columns = distributeIntoColumns(filteredData, currentNumColumns);
 
-        projectCardsContainer.appendChild(projectComponent);
+      columns.forEach(columnData => {
+        const columnDiv = document.createElement('div');
+        columnDiv.classList.add('project-column');
+        columnDiv.style.display = 'flex';
+        columnDiv.style.flexDirection = 'column';
+        columnDiv.style.flex = '1 1 0';
+        columnDiv.style.minWidth = '0';
+
+        columnData.forEach(project => {
+          const projectComponent = document.createElement('project-cards');
+          projectComponent.setAttribute('name', project.name[currentLanguage]);
+          projectComponent.setAttribute('description', project.description[currentLanguage]);
+          projectComponent.setAttribute('src', project.src);
+          projectComponent.setAttribute('tag1', project.tag1[currentLanguage]);
+          projectComponent.setAttribute('tag2', project.tag2[currentLanguage]);
+          projectComponent.setAttribute('link', project.link);
+          projectComponent.setAttribute('icon', project.icon);
+
+          columnDiv.appendChild(projectComponent);
+        });
+
+        projectCardsContainer.appendChild(columnDiv);
       });
     }
 
@@ -79,24 +126,33 @@ fetch('./public/projects.json')
         .map(checkbox => checkbox.value);
 
       if (selectedFilters.length === 0 || selectedFilters.includes('all')) {
-        renderProjects(data); // Mostrar todos los proyectos si no hay filtros o si "All" está seleccionado
+        renderProjects(allData); // Mostrar todos los proyectos si no hay filtros o si "All" está seleccionado
         return;
       }
 
-      const filteredData = data.filter(project =>
+      const filteredData = allData.filter(project =>
         project.checkValue.some(tag => selectedFilters.includes(tag))
       );
 
       renderProjects(filteredData);
     }
 
+    // Re-renderizar en resize SOLO si cambia la cantidad de columnas
+    // (evita recalcular en cada pixel de resize)
+    window.addEventListener('resize', () => {
+      const newNumColumns = getNumColumns();
+      if (newNumColumns !== currentNumColumns) {
+        renderProjects(currentFilteredData);
+      }
+    });
+
     // Renderizar los proyectos inicialmente
-    renderProjects();
+    renderProjects(data);
     updateCheckboxes(); // Asegurar que "All" se active si nada más está seleccionado
 
     document.addEventListener('languageChange', (event) => {
       currentLanguage = event.detail.language;
-      renderProjects();
+      renderProjects(currentFilteredData);
     });
 
     // Aplicar evento de cambio a los checkboxes
@@ -181,7 +237,6 @@ class ProjectCard extends HTMLElement {
         <style>
           .project {
             margin-bottom: 3vw;
-            break-inside: avoid;
             background-color: var(--Purple);
             border-radius: 10px;
             text-align: left;
@@ -297,7 +352,7 @@ class ProjectCard extends HTMLElement {
               <h3 class="project-title">${name}</h3>
               <div class="project-tags">
                 <custom-tag type="pink" label=${tag1}></custom-tag>
-                <custom-tag label=${tag2}></custom-tag>
+                <custom-tag type="purple" label=${tag2}></custom-tag>
               </div>
               <p class="project-description">${description}</p>
             </div>

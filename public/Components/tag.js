@@ -28,7 +28,9 @@ class TagComponent extends HTMLElement {
       this.tag.textContent = label;
 
       const type = this.getAttribute('type');
-      let color = type === "pink" ? "var(--Pink)" : "var(--LightPurple)";
+      let color = type === "pink" ? "var(--Pink)" 
+                  : type === "purple" ? "var(--LightPurple)" 
+                  : "var(--DarkPurple)";
       
       this.styleTag.textContent = `
         .tag {

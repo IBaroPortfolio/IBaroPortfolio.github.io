@@ -21,6 +21,30 @@
       "link": "https://www.behance.net/gallery/200259979/CloudTrack-GDO",
       "icon": "Behance"
     },
+
+    {
+      "name": {
+        "en": "Trans-pasando Fronteras #22",
+        "es": "Trans-pasando Fronteras #22"
+      },
+      "description": {
+        "en": "I created, designed and ilustrated the main cover of the magazine Trans-pasando Fronteras of Universidad Icesi for its 22nd edition, as well as the covers for each section of the magazine.",
+        "es": "Creé, diseñé e ilustré la portada principal de la revista Trans-pasando Fronteras de la Universidad Icesi para su 22° edición, además de las portadas para cada sección de la revista."
+      },
+      "src": "./public/assets/projects/RevistaTF.png",
+      "tag1": {
+        "en": "Graphic",
+        "es": "Gráfico"
+      },
+      "tag2": {
+        "en": "Illustration",
+        "es": "Ilustración"
+      },
+      "checkValue": ["graphic", "illustration"],
+      "link": "https://www.icesi.edu.co/revistas/index.php/trans-pasando_fronteras/es/issue/view/346",
+      "icon": "Other"
+    },
+
     {
       "name": {
         "en": "Ritual of Madness",
@@ -90,29 +114,6 @@
       "icon": "Behance"
     },
 
-
-    {
-      "name": {
-        "en": "Nintendo OOH",
-        "es": "Nintendo OOH"
-      },
-      "description": {
-        "en": "The project consists creating and prototyping an interactive Out-Of-Home experience for Nintendo, with the purpose of captivating new costumers and promoting the brand's products. <br><br> My role was to help build the interface and the great majority of the code.",
-        "es": "El poryecto consiste en crear y prototipar una experiencia Out-Of-Home interactiva para Nintendo, con el proposito de cautivar nuevos consumidores y promocionar los productos de la marca. <br><br> Mi rol fue el de ayudar a construir la interfaz y gran parte del código."
-      },
-      "src": "./public/assets/projects/ProjectNintendo.jpg",
-      "tag1": {
-        "en": "UI",
-        "es": "UI"
-      },
-      "tag2": {
-        "en": "Code",
-        "es": "Código"
-      },
-      "checkValue": ["ui", "code"],
-      "link": "https://www.behance.net/gallery/163439649/Nintendo-OOH-Experience",
-      "icon": "Behance"
-    },
     {
       "name": {
         "en": "Aves de Cali",
@@ -135,6 +136,7 @@
       "link": "https://www.icesi.edu.co/editorial/aves-de-cali/",
       "icon": "Other"
     },
+
     {
       "name": {
         "en": "Hina Matsuri",
@@ -157,6 +159,7 @@
       "link": "https://www.behance.net/gallery/205842443/Hina-Matsuri-Illustration-animation",
       "icon": "Behance"
     },
+
     {
       "name": {
         "en": "Tesla Poster",
@@ -179,6 +182,7 @@
       "link": "https://www.behance.net/gallery/120372203/Nikola-Tesla-poster-design-isabella-Barona",
       "icon": "Behance"
     },
+
     {
       "name": {
         "en": "Hard Rock Poster",
@@ -201,6 +205,7 @@
       "link": "https://www.behance.net/gallery/119618015/Hard-Rock-Cafe-New-Orleans-Isabella-Barona",
       "icon": "Behance"
     },
+
     {
       "name": {
         "en": "Mauritius Country Brand",
@@ -221,6 +226,29 @@
       },
       "checkValue": ["graphic", "brand"],
       "link": "https://www.behance.net/gallery/139578265/Country-brand-design-Mauritius",
+      "icon": "Behance"
+    },
+
+    {
+      "name": {
+        "en": "Nintendo OOH",
+        "es": "Nintendo OOH"
+      },
+      "description": {
+        "en": "The project consists creating and prototyping an interactive Out-Of-Home experience for Nintendo, with the purpose of captivating new costumers and promoting the brand's products. <br><br> My role was to help build the interface and the great majority of the code.",
+        "es": "El poryecto consiste en crear y prototipar una experiencia Out-Of-Home interactiva para Nintendo, con el proposito de cautivar nuevos consumidores y promocionar los productos de la marca. <br><br> Mi rol fue el de ayudar a construir la interfaz y gran parte del código."
+      },
+      "src": "./public/assets/projects/ProjectNintendo.jpg",
+      "tag1": {
+        "en": "UI",
+        "es": "UI"
+      },
+      "tag2": {
+        "en": "Code",
+        "es": "Código"
+      },
+      "checkValue": ["ui", "code"],
+      "link": "https://www.behance.net/gallery/163439649/Nintendo-OOH-Experience",
       "icon": "Behance"
     }
   ]

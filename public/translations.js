@@ -61,17 +61,24 @@ export default {
             work:{
                 title: "Work Experience",
                 group1:{
-                    date: "September 2024 - Present day",
+                    date: "February 2024 - July 2024",
+                    job: "UI designer and frontend developer",
+                    place: "Gases de Occidente, Cali"
+                },
+                group2:{
+                    date: "August 2024 - July 2025",
+                    job: "Monitor",
+                    place: "UXLabICESI, Cali"
+                },
+                group3:{
+                    date: "September 2024 - July 2025",
                     job: "Illustrator",
                     place: "Trans-pasando Fronteras Magazine, Cali"
                 },
-                group2:{
-                    date: "August 2024 - Present day",
-                    job: "Monitor"
-                },
-                group3:{
-                    date: "February 2024 - July 2024",
-                    job: "UI designer and frontend developer"
+                group4:{
+                    date: "August 2025 - Present day",
+                    job: "Junior Content Designer",
+                    place: "Ally Rite, Boston"
                 }
             },
 
@@ -80,8 +87,6 @@ export default {
                 group1:{
                     title: "Interactive Media Design",
                     achieve: "Achievements",
-                    li1: "Academic Excellence Scholarship - Silver category",
-                    li2: "Honor Roll 2021-2 - Category 1",
                     li3: "Pixel Media award– 1st place for Audiovisual production"
                 },
                 group2:{
@@ -92,7 +97,7 @@ export default {
             extra:{
                 title: "Extracurriculars",
                 group1:{
-                    date: "July 2024 - Present day",
+                    date: "July 2024 -  July 2025",
                     job: "Design committee leader",
                     place: "Güinev student group"
                 }
@@ -185,17 +190,24 @@ export default {
             work:{
                 title: "Experiencia laboral",
                 group1:{
-                    date: "Septiembre 2024 - Actualidad",
+                    date: "Febrero 2024 - Julio 2024",
+                    job: "Diseñadora UI y desarrolladora frontend",
+                    place: "Gases de Occidente, Cali"
+                },
+                group2:{
+                    date: "Agosto 2024 - Julio 2025",
+                    job: "Monitora",
+                    place: "UXLabICESI, Cali"
+                },
+                group3:{
+                    date: "Septiembre 2024 - Julio 2025",
                     job: "Illustradora",
                     place: "Revista Trans-pasando Fronteras, Cali"
                 },
-                group2:{
-                    date: "Agosto 2024 - Actualidad",
-                    job: "Monitora"
-                },
-                group3:{
-                    date: "Febrero 2024 - Julio 2024",
-                    job: "Diseñadora UI y desarrolladora frontend"
+                group4:{
+                    date: "Agosto 2025 - Actualidad",
+                    job: "Diseñadora De Contenido Junior",
+                    place: "Ally Rite, Boston"
                 }
             },
 
@@ -204,8 +216,6 @@ export default {
                 group1:{
                     title: "Diseño de Medios Interactivos",
                     achieve: "Logros",
-                    li1: "Beca de Excelencia Académica - Categoría Plata",
-                    li2: "Cuadro de Honor 2021-2 - Categoría 1",
                     li3: "Premio Pixel Media – 1er lugar en Producción Audiovisual"
                 },
                 group2:{
@@ -216,7 +226,7 @@ export default {
             extra:{
                 title: "Extracurriculares",
                 group1:{
-                    date: "Julio 2024 - Actualidad",
+                    date: "Julio 2024 - Julio 2025",
                     job: "Líder del comité de diseño",
                     place: "Grupo estudiantil Güinev"
                 }

@@ -162,6 +162,7 @@
 
     #About-Title{
         justify-content: end;
+        margin-bottom: 4vh;
     }
 
     /* About me */
@@ -173,8 +174,17 @@
         align-items: end;
     }
 
+    #AboutPage-Me{
+        align-items: center;
+    }
+
         #About-img{
-            width: 85%;
+            width: 80%;
+        }
+
+        #AboutPage-img{
+            margin: -5vh 0 0 10vh;
+            width: 70%;
         }
 
         .About-Me-Section{
@@ -186,7 +196,7 @@
             .About-Tags{
                 display: flex;
                 justify-content: right;
-                margin: 2vh 0;
+                margin: 3vh 0 0 0;
             }
 
             .About-Text {
@@ -194,7 +204,7 @@
                 /* background-color: var(--Purple); */
                 border-radius: 10px 0 0 10px; /* Mantiene el border-radius */
                 padding: 8vh 6vw 8vh 8vh;
-                margin: 6vh -6vw 10vh 0;
+                margin: 0 -6vw 10vh 0;
             }
             
                 .About-Text::before {
